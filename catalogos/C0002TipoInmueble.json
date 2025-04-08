@@ -1,0 +1,16 @@
+{
+    "nombre": "C0002TipoInmueble",
+    "origien": [
+        "https://www.sat.gob.mx/cs/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1705376468152&ssbinary=true"
+    ],
+    "utilizadoPor": [
+        "D0002"
+    ],
+    "catalogo": {
+        "01": "Terreno",
+        "02": "Terreno uso comercial",
+        "03": "Construcción habitacional",
+        "04": "Construcción uso comercial",
+        "05": "Uso mixto"
+    }
+}

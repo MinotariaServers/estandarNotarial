@@ -1,0 +1,33 @@
+{
+    "dataOrigen": [
+        {
+            "id": "D0001",
+            "nombre": "CFDI",
+            "descripcion": "Comprobante Fiscal Digital por Internet",
+            "manuales": [
+                {
+                    "nombre": "XSD del SAT",
+                    "link": "https://www.sat.gob.mx/sitio_internet/cfd/notariospublicos/notariospublicos.xsd"
+                }
+            ]
+        },
+        {
+            "id": "D0002",
+            "nombre": "CFDI->notariospublicos",
+            "manuales": [
+                {
+                    "nombre": "XSD del SAT",
+                    "link": "https://www.sat.gob.mx/sitio_internet/cfd/notariospublicos/notariospublicos.xsd"
+                },
+                {
+                    "nombre": "Ejemplo de llenado de complemento de Notarios",
+                    "link": "https://developers.sw.com.mx/knowledge-base/cfdi40-notarios-publicos-10/"
+                },
+                {
+                    "nombre": "Catálogos del Complemento de Notarios Públicos",
+                    "link": "https://www.sat.gob.mx/cs/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1705376468152&ssbinary=true"
+                }
+            ]
+        }
+    ]
+}
