@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante Fecha="2024-03-01T00:00:00" Folio="679" FormaPago="01" LugarExpedicion="22214" MetodoPago="PUE" Moneda="MXN" Sello="M1HHmv8EgWU99nXEULpfeH1LTrNmJjTbi1xsYA//WI8S9gcpmxiu+W/fEEnGopks7zSxMoN5YaNJFopqKehLWIDuZd/7Q75qa5k87cD1HKH8QKHNfWw+8mrO8AEMttaBjrNU+LPQWQykn2koQx0UGzgtDrlrwQ4YHrsgzBZtUDxuZEOWTKFps3ilpzI7ckRytrwE6WHEs6DTwkILe48LQWxagDF8U/isXoojOY0u69gIi9kjEjloV8VTm/6l77KTG6Og2v/moRmrwGX/b+5ANid+aP8PKqK6b/4TjdYEo+s+Z71vRtzxjsWcMtsKpgd+fHe+GIffZBP1P6FiTtY+yw==" Serie="F" SubTotal="50000.00" Exportacion="01" TipoDeComprobante="I" Total="58000.00" Version="4.0"
+    xmlns:cfdi="http://www.sat.gob.mx/cfd/4"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Certificado="MIIFsDCCA5igAwIBAgIUMzAwMDEwMDAwMDA1MDAwMDM0MTYwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWxpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMjMwNTE4MTE0MzUxWhcNMjcwNTE4MTE0MzUxWjCB1zEnMCUGA1UEAxMeRVNDVUVMQSBLRU1QRVIgVVJHQVRFIFNBIERFIENWMScwJQYDVQQpEx5FU0NVRUxBIEtFTVBFUiBVUkdBVEUgU0EgREUgQ1YxJzAlBgNVBAoTHkVTQ1VFTEEgS0VNUEVSIFVSR0FURSBTQSBERSBDVjElMCMGA1UELRMcRUtVOTAwMzE3M0M5IC8gVkFEQTgwMDkyN0RKMzEeMBwGA1UEBRMVIC8gVkFEQTgwMDkyN0hTUlNSTDA1MRMwEQYDVQQLEwpTdWN1cnNhbCAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtmecO6n2GS0zL025gbHGQVxznPDICoXzR2uUngz4DqxVUC/w9cE6FxSiXm2ap8Gcjg7wmcZfm85EBaxCx/0J2u5CqnhzIoGCdhBPuhWQnIh5TLgj/X6uNquwZkKChbNe9aeFirU/JbyN7Egia9oKH9KZUsodiM/pWAH00PCtoKJ9OBcSHMq8Rqa3KKoBcfkg1ZrgueffwRLws9yOcRWLb02sDOPzGIm/jEFicVYt2Hw1qdRE5xmTZ7AGG0UHs+unkGjpCVeJ+BEBn0JPLWVvDKHZAQMj6s5Bku35+d/MyATkpOPsGT/VTnsouxekDfikJD1f7A1ZpJbqDpkJnss3vQIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQsFAAOCAgEAFaUgj5PqgvJigNMgtrdXZnbPfVBbukAbW4OGnUhNrA7SRAAfv2BSGk16PI0nBOr7qF2mItmBnjgEwk+DTv8Zr7w5qp7vleC6dIsZFNJoa6ZndrE/f7KO1CYruLXr5gwEkIyGfJ9NwyIagvHHMszzyHiSZIA850fWtbqtythpAliJ2jF35M5pNS+YTkRB+T6L/c6m00ymN3q9lT1rB03YywxrLreRSFZOSrbwWfg34EJbHfbFXpCSVYdJRfiVdvHnewN0r5fUlPtR9stQHyuqewzdkyb5jTTw02D2cUfL57vlPStBj7SEi3uOWvLrsiDnnCIxRMYJ2UA2ktDKHk+zWnsDmaeleSzonv2CHW42yXYPCvWi88oE1DJNYLNkIjua7MxAnkNZbScNw01A6zbLsZ3y8G6eEYnxSTRfwjd8EP4kdiHNJftm7Z4iRU7HOVh79/lRWB+gd171s3d/mI9kte3MRy6V8MMEMCAnMboGpaooYwgAmwclI2XZCczNWXfhaWe0ZS5PmytD/GDpXzkX0oEgY9K/uYo5V77NdZbGAjmyi8cE2B2ogvyaN2XfIInrZPgEffJ4AB7kFA2mwesdLOCh0BLD9itmCve3A1FGR4+stO2ANUoiI3w3Tv2yQSg4bjeDlJ08lXaaFCLW2peEXMXjQUk7fmpb5MNuOUTW6BE=" NoCertificado="30001000000500003416" xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd http://www.sat.gob.mx/notariospublicos http://www.sat.gob.mx/sitio_internet/cfd/notariospublicos/notariospublicos.xsd"
+    xmlns:notariospublicos="http://www.sat.gob.mx/notariospublicos">
+    <cfdi:Emisor Rfc="EKU9003173C9" Nombre="ESCUELA KEMPER URGATE" RegimenFiscal="601" />
+    <cfdi:Receptor Rfc="URE180429TM6" Nombre="UNIVERSIDAD ROBOTICA ESPAÑOLA" DomicilioFiscalReceptor="86991" RegimenFiscalReceptor="601" UsoCFDI="G01" />
+    <cfdi:Conceptos>
+        <cfdi:Concepto Cantidad="1" ClaveProdServ="10201801" ClaveUnidad="LM" Descripcion="TERRENO 10x8 MTS" Importe="50000.00" NoIdentificacion="02" Unidad="METRO LINEAL" ValorUnitario="50000.00" ObjetoImp="02">
+            <cfdi:Impuestos>
+                <cfdi:Traslados>
+                    <cfdi:Traslado Base="50000.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="8000.00" />
+                </cfdi:Traslados>
+            </cfdi:Impuestos>
+        </cfdi:Concepto>
+    </cfdi:Conceptos>
+    <cfdi:Impuestos TotalImpuestosTrasladados="8000.00">
+        <cfdi:Traslados>
+            <cfdi:Traslado Base="50000.00" Importe="8000.00" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa" />
+        </cfdi:Traslados>
+    </cfdi:Impuestos>
+    <cfdi:Complemento>
+        <notariospublicos:NotariosPublicos Version="1.0">
+            <notariospublicos:DescInmuebles>
+                <notariospublicos:DescInmueble TipoInmueble="01" Calle="8 De Julio" Municipio="Zapopan" Estado="01" Pais="MEX" CodigoPostal="45236" />
+            </notariospublicos:DescInmuebles>
+            <notariospublicos:DatosOperacion NumInstrumentoNotarial="1234" FechaInstNotarial="2022-05-10" MontoOperacion="50000" Subtotal="42000" IVA="8000" />
+            <notariospublicos:DatosNotario CURP="XEXX010101HNEXXXA4" NumNotaria="123" EntidadFederativa="01" />
+            <notariospublicos:DatosEnajenante CoproSocConyugalE="Si">
+                <notariospublicos:DatosUnEnajenante Nombre="KARLA" ApellidoPaterno="FUENTE" RFC="FUNK671228PH6" CURP="XEXX010101HNEXXXA4" />
+            </notariospublicos:DatosEnajenante>
+            <notariospublicos:DatosAdquiriente CoproSocConyugalE="Si">
+                <notariospublicos:DatosUnAdquiriente Nombre="INGRID XODAR JIMENEZ" RFC="XOJI740919U48" CURP="XEXX010101HNEXXXA4" />
+            </notariospublicos:DatosAdquiriente>
+        </notariospublicos:NotariosPublicos>
+        <tfd:TimbreFiscalDigital xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="95400488-98b4-46d7-8081-bf1b41d52ffa" FechaTimbrado="2024-03-01T16:50:59" RfcProvCertif="SPR190613I52" SelloCFD="M1HHmv8EgWU99nXEULpfeH1LTrNmJjTbi1xsYA//WI8S9gcpmxiu+W/fEEnGopks7zSxMoN5YaNJFopqKehLWIDuZd/7Q75qa5k87cD1HKH8QKHNfWw+8mrO8AEMttaBjrNU+LPQWQykn2koQx0UGzgtDrlrwQ4YHrsgzBZtUDxuZEOWTKFps3ilpzI7ckRytrwE6WHEs6DTwkILe48LQWxagDF8U/isXoojOY0u69gIi9kjEjloV8VTm/6l77KTG6Og2v/moRmrwGX/b+5ANid+aP8PKqK6b/4TjdYEo+s+Z71vRtzxjsWcMtsKpgd+fHe+GIffZBP1P6FiTtY+yw==" NoCertificadoSAT="30001000000500003456" SelloSAT="Hl1xNzJww0XdRPXDW4pyB4Bdi9tQRSAkU81A6zxdBIiNmd7dPKimQhn7GYFiG9otuLaUeiwYZ21uRG0B7w+2bNRWtUzonjJa5VspSoI+kzUoRSDdtJvWabN8ttW3wXS019vBME/JXLTlEFe3xMQIX61bfJQccEDnRwWNvjMI06IbRcWFEBULmPLKUuUZpzz/N6BycVmoD4D3SkgmiOCYmSH7NP9trPtqE/ZJfwNsoe4v+rhQTxEmHrVJ5Dbo/RFaZ7k6/JbeyhHe+aj2SBL830l2V/l/1+xYiL4Jt29NdT+tBk9jRZMXIJnjLKKzGa9x83DEVaBO3Tri8WPHtPtgiQ=="
+            xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+    </cfdi:Complemento>
+</cfdi:Comprobante>

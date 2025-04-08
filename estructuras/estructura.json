@@ -1,0 +1,673 @@
+{
+    "message": "Resumen del expediente listados correctamente.136 (2025-01-13--03:19:32)",
+    "data": {
+        "faltantes": [
+            {
+                "id": "D0002",
+                "campos": [
+                    "NotariosPublicos->DescInmuebles->DescInmueble:[Localidad]:[Referencia]",
+                    "NotariosPublicos->DatosOperacion:[IVA]",
+                    "NotariosPublicos->DatosNotario:[CURP]:[NumNotaria]:[EntidadFederativa]:[Adscripcion]",
+                    "NotariosPublicos->DatosEnajenante:[CoproSocConyugalE]",
+                    "NotariosPublicos->DatosAdquiriente:[CoproSocConyugalE]",
+                    "NotariosPublicos->DatosEnajenantesCopSC->DatosEnajenanteCopSC:[Porcentaje]",
+                    "NotariosPublicos->DatosAdquirientesCopSC->DatosAdquirienteCopSC:[Porcentaje]"
+                ]
+            }
+        ],
+        "notario": {
+            "numero": "",
+            "entidad": "",
+            "nombreFiscal": "",
+            "rfc": "",
+            "curp": ""
+        },
+        "expediente": {
+            "expediente": "128\/FGGZ",
+            "descripcion": "Compraventa Señor Morales",
+            "fecha_apertura": "31-12-2024",
+            "entidad": "Oaxaca",
+            "estatus_expediente": "proceso",
+            "abogado": "FGGZ",
+            "notario": "FGGZ",
+            "no_notario": 32,
+            "no_abogado": 32,
+            "observaciones": [],
+            "identificaciones": []
+        },
+        "instrumento": {
+            "protocolo": "01 protocolo abierto - 200",
+            "instrumento": {
+                "ejemplos": [
+                    "2025"
+                ],
+                "utilizadoEn": [
+                    {
+                        "id": "D0002",
+                        "decripcion": "CFDI->notariospublicos",
+                        "campos": [
+                            {
+                                "nombre": "NumInstrumentoNotarial",
+                                "ruta": "NotariosPublicos->DatosOperacion"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "libro": 33,
+            "tomo": null,
+            "fecha_pase": "21-12-2024",
+            "fecha_firma": {
+                "ejemplos": [
+                    "28-12-2024"
+                ],
+                "utilizadoEn": [
+                    {
+                        "id": "D0002",
+                        "decripcion": "CFDI->notariospublicos",
+                        "campos": [
+                            {
+                                "nombre": "FechaInstNotarial",
+                                "ruta": "NotariosPublicos->DatosOperacion"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fecha_definitiva": null,
+            "no_de_folios": 4,
+            "folio_inicial": 1,
+            "folio_final": 4,
+            "estatus": "por firmar"
+        },
+        "comparecientes": [
+            {
+                "comp_id": 54,
+                "personaTipo": "PF | Persona Física Nacional vive en México y\/o Extranjero. (Anexo3)",
+                "curp": {
+                    "ejemplos": [
+                        "AAPU790804HDFLRL03"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "CURP",
+                                    "ruta": "NotariosPublicos->DatosEnajenante->DatosUnEnajenante"
+                                },
+                                {
+                                    "nombre": "CURP",
+                                    "ruta": "NotariosPublicos->DatosEnajenante->DatosEnajenantesCopSC->DatosEnajenanteCopSC"
+                                },
+                                {
+                                    "nombre": "CURP",
+                                    "ruta": "NotariosPublicos->DatosAdquiriente->DatosUnAdquiriente"
+                                },
+                                {
+                                    "nombre": "CURP",
+                                    "ruta": "NotariosPublicos->DatosAdquirientesCopSC->DatosAdquirienteCopSC"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "nombre": {
+                    "ejemplos": [
+                        "ULISES"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "Nombre",
+                                    "ruta": "NotariosPublicos->DatosEnajenante->DatosUnEnajenante"
+                                },
+                                {
+                                    "nombre": "Nombre",
+                                    "ruta": "NotariosPublicos->DatosAdquiriente->DatosUnEnajenante"
+                                },
+                                {
+                                    "nombre": "Nombre",
+                                    "ruta": "NotariosPublicos->DatosEnajenantesCopSC->DatosEnajenanteCopSC"
+                                },
+                                {
+                                    "nombre": "Nombre",
+                                    "ruta": "NotariosPublicos->DatosAdquirientesCopSC->DatosAdquirienteCopSC"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "primerApellido": {
+                    "ejemplos": [
+                        "PEREZ"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "ApellidoPaterno",
+                                    "ruta": "NotariosPublicos->DatosEnajenante->DatosUnEnajenante"
+                                },
+                                {
+                                    "nombre": "ApellidoPaterno",
+                                    "ruta": "NotariosPublicos->DatosAdquiriente->DatosUnEnajenante"
+                                },
+                                {
+                                    "nombre": "ApellidoPaterno",
+                                    "ruta": "NotariosPublicos->DatosEnajenantesCopSC->DatosEnajenanteCopSC"
+                                },
+                                {
+                                    "nombre": "ApellidoPaterno",
+                                    "ruta": "NotariosPublicos->DatosAdquirientesCopSC->DatosAdquirienteCopSC"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "segundoApellido": {
+                    "ejemplos": [
+                        "PEREZ"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "ApellidoMaterno",
+                                    "ruta": "NotariosPublicos->DatosEnajenante->DatosUnEnajenante"
+                                },
+                                {
+                                    "nombre": "ApellidoMaterno",
+                                    "ruta": "NotariosPublicos->DatosAdquiriente->DatosUnEnajenante"
+                                },
+                                {
+                                    "nombre": "ApellidoMaterno",
+                                    "ruta": "NotariosPublicos->DatosEnajenantesCopSC->DatosEnajenanteCopSC"
+                                },
+                                {
+                                    "nombre": "ApellidoMaterno",
+                                    "ruta": "NotariosPublicos->DatosAdquirientesCopSC->DatosAdquirienteCopSC"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "nombreCompleto": "ULISES ALCANTARA PEREZ",
+                "fechaNacimiento": "1979-08-04",
+                "fechaDefuncion": null,
+                "Nacimiento": "MX",
+                "NacionalidadPais": "MX",
+                "rfc": {
+                    "ejemplos": [
+                        "AAPU790804II9"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "RFC",
+                                    "ruta": "NotariosPublicos->DatosEnajenante->DatosUnEnajenante"
+                                },
+                                {
+                                    "nombre": "RFC",
+                                    "ruta": "NotariosPublicos->DatosAdquiriente->DatosUnEnajenante"
+                                },
+                                {
+                                    "nombre": "RFC",
+                                    "ruta": "NotariosPublicos->DatosEnajenantesCopSC->DatosEnajenanteCopSC"
+                                },
+                                {
+                                    "nombre": "RFC",
+                                    "ruta": "NotariosPublicos->DatosAdquirientesCopSC->DatosAdquirienteCopSC"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "nombreFiscal": {
+                    "ejemplos": [
+                        "ANDRES CUÑA TORRES"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "nombre": "CFDI->retenciones",
+                            "campo": {
+                                "nombre": "NomDenRazSocE",
+                                "ruta": "retenciones:Retenciones->retenciones:Receptor->retenciones:Nacional"
+                            }
+                        },
+                        {
+                            "nombre": "CFDI",
+                            "campo": {
+                                "nombre": "Nombre",
+                                "ruta": "cfdi:Comprobante->cfdi:Receptor"
+                            }
+                        }
+                    ]
+                },
+                "numRegIdTrib": null,
+                "codigoPostal": "02099",
+                "RegimenFiscal": "605 | Sueldos y Salarios e Ingresos Asimilados a Salarios (PF).",
+                "UsoCFDI": "CN01 | Nómina (PF)",
+                "domicilios": {
+                    "particular": [],
+                    "fiscal": []
+                },
+                "identificaciones": []
+            }
+        ],
+        "inmuebles": [
+            {
+                "pais": {
+                    "ejemplos": [
+                        "MEXICO"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "Pais",
+                                    "ruta": "NotariosPublicos->DescInmuebles->DescInmueble",
+                                    "catalogo": [
+                                        "http://127.0.0.1:8000/estandar/catalogos/C0003Paises.json"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "cp": "01578",
+                "estado": {
+                    "ejemplos": [
+                        "Ciudad de México"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "Estado",
+                                    "ruta": "NotariosPublicos->DescInmuebles->DescInmueble",
+                                    "catalogo": [
+                                        "http://127.0.0.1:8000/estandar/catalogos/C0001EntidadesFederativas.json"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "municipio": {
+                    "ejemplos": [
+                        "Alvaro Obregon"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "Municipio",
+                                    "ruta": "NotariosPublicos->DescInmuebles->DescInmueble"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "colonia": {
+                    "ejemplos": [
+                        "Villa Progresista"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "Colonia",
+                                    "ruta": "NotariosPublicos->DescInmuebles->DescInmueble"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "calle": {
+                    "ejemplos": [
+                        "Lomas de sotelo"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "Calle",
+                                    "ruta": "NotariosPublicos->DescInmuebles->DescInmueble"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "numero_exterior": {
+                    "ejemplos": [
+                        "23"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "NoExterior",
+                                    "ruta": "NotariosPublicos->DescInmuebles->DescInmueble"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "numero_interior": {
+                    "ejemplos": [
+                        "2"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "NoInterior",
+                                    "ruta": "NotariosPublicos->DescInmuebles->DescInmueble"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "manzana": "2",
+                "lote": "83",
+                "tipo_inmueble": {
+                    "ejemplos": [
+                        "casa habitacion | construccion habitacional"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "TipoInmueble",
+                                    "ruta": "NotariosPublicos->DescInmuebles->DescInmueble",
+                                    "catalogo": [
+                                        "C0002TipoInmueble.json"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "folio_real": "20243321-33",
+                "numero": "-",
+                "tomo": "-",
+                "libro": "-",
+                "volumen": "-",
+                "unidad": "-",
+                "seccion": "-",
+                "fecha": "02-04-1993",
+                "m2_terreno": 300,
+                "m2_construc": 200,
+                "valor_avaluo": 2567000,
+                "valor_catastral": 1200345,
+                "valor_catastral_terreno": 200345,
+                "valor_catastral_construccion": 1000000,
+                "valor_catastral_construccion_iva": 0,
+                "precio": {
+                    "ejemplos": [
+                        3000000.00
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "MontoOperacion",
+                                    "ruta": "NotariosPublicos->DatosOperacion"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "precio_terreno": {
+                    "ejemplos": [
+                        1000000.00
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "Subtotal",
+                                    "ruta": "NotariosPublicos->DatosOperacion"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "precio_construccion": {
+                    "ejemplos": [
+                        200000.00
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "Subtotal",
+                                    "ruta": "NotariosPublicos->DatosOperacion"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "precio_construccion_iva": {
+                    "ejemplos": [
+                        160000.00
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "IVA",
+                                    "ruta": "NotariosPublicos->DatosOperacion"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "precio_terreno_iva": {
+                    "ejemplos": [
+                        160000.00
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "IVA",
+                                    "ruta": "NotariosPublicos->DatosOperacion"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "actos": [
+            {
+                "act_id": 85,
+                "clave": "CV",
+                "acto": "Compraventa",
+                "comparecientes": [
+                    {
+                        "comp_id": 52,
+                        "curp": "LOCD981228HDFPNS02",
+                        "nombre": "ANDRES CUÑA TORRES",
+                        "firmante": "si",
+                        "fecha_firma_comp": null,
+                        "roles": [
+                            "enajenante"
+                        ]
+                    },
+                    {
+                        "comp_id": 53,
+                        "curp": "XEXX010101HNEXXXA4",
+                        "nombre": "CESAR LÓPEZ TREJO",
+                        "firmante": "si",
+                        "fecha_firma_comp": null,
+                        "roles": [
+                            "adquirente"
+                        ]
+                    }
+                ]
+            },
+            {
+                "act_id": 86,
+                "clave": "CRED",
+                "acto": "Credito",
+                "comparecientes": [
+                    {
+                        "comp_id": 53,
+                        "curp": "XEXX010101HNEXXXA4",
+                        "nombre": "CESAR LÓPEZ TREJO",
+                        "firmante": "si",
+                        "fecha_firma_comp": null,
+                        "roles": [
+                            "deudor"
+                        ]
+                    },
+                    {
+                        "comp_id": 54,
+                        "curp": "AAPU790804HDFLRL03",
+                        "nombre": "ULISES ALCANTARA PEREZ",
+                        "firmante": "si",
+                        "fecha_firma_comp": null,
+                        "roles": [
+                            "representante"
+                        ]
+                    },
+                    {
+                        "comp_id": 56,
+                        "curp": null,
+                        "nombre": "COCA COLA SA DE CV",
+                        "firmante": "no",
+                        "fecha_firma_comp": null,
+                        "roles": [
+                            "acreedor"
+                        ]
+                    }
+                ]
+            },
+            {
+                "act_id": 87,
+                "clave": "HIP",
+                "acto": "Hipoteca",
+                "comparecientes": [
+                    {
+                        "comp_id": 53,
+                        "curp": "XEXX010101HNEXXXA4",
+                        "nombre": "CESAR LÓPEZ TREJO",
+                        "firmante": "si",
+                        "fecha_firma_comp": null,
+                        "roles": [
+                            "deudor",
+                            "garante hipotecario"
+                        ]
+                    },
+                    {
+                        "comp_id": 54,
+                        "curp": "AAPU790804HDFLRL03",
+                        "nombre": "ULISES ALCANTARA PEREZ",
+                        "firmante": "si",
+                        "fecha_firma_comp": null,
+                        "roles": [
+                            "representante"
+                        ]
+                    },
+                    {
+                        "comp_id": 56,
+                        "curp": null,
+                        "nombre": "COCA COLA SA DE CV",
+                        "firmante": "no",
+                        "fecha_firma_comp": null,
+                        "roles": [
+                            "acreedor"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "actividades_expedientes": [
+            {
+                "actividad": "Cliente Pagó",
+                "estatus actividad": "por solicitar",
+                "etapa": "posterior",
+                "ultima_actualizacion": "31-12-2024 17:41:52",
+                "ultimo_usuario": "pepe"
+            },
+            {
+                "actividad": "Testimonio",
+                "estatus actividad": "por solicitar",
+                "etapa": "posterior",
+                "ultima_actualizacion": "31-12-2024 17:41:52",
+                "ultimo_usuario": "pepe"
+            },
+            {
+                "actividad": "Firma",
+                "estatus actividad": "por solicitar",
+                "etapa": "posterior",
+                "ultima_actualizacion": "31-12-2024 17:41:52",
+                "ultimo_usuario": "pepe"
+            },
+            {
+                "actividad": "Agual",
+                "estatus actividad": "finalizada",
+                "etapa": "previo",
+                "ultima_actualizacion": "31-12-2024 17:42:10",
+                "ultimo_usuario": "pepe"
+            },
+            {
+                "actividad": "Avaluo",
+                "estatus actividad": "solicitada",
+                "etapa": "previo",
+                "ultima_actualizacion": "31-12-2024 17:42:44",
+                "ultimo_usuario": "pepe"
+            },
+            {
+                "actividad": "Predial",
+                "estatus actividad": "finalizada",
+                "etapa": "previo",
+                "ultima_actualizacion": "31-12-2024 17:42:18",
+                "ultimo_usuario": "pepe"
+            }
+        ]
+    },
+    "action": "",
+    "method": "GET",
+    "type": "CRUD"
+}
