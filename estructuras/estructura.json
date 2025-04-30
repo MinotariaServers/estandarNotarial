@@ -5,22 +5,109 @@
             {
                 "id": "D0002",
                 "campos": [
-                    "NotariosPublicos->DescInmuebles->DescInmueble:[Localidad]:[Referencia]",
-                    "NotariosPublicos->DatosOperacion:[IVA]",
-                    "NotariosPublicos->DatosNotario:[CURP]:[NumNotaria]:[EntidadFederativa]:[Adscripcion]",
-                    "NotariosPublicos->DatosEnajenante:[CoproSocConyugalE]",
-                    "NotariosPublicos->DatosAdquiriente:[CoproSocConyugalE]",
-                    "NotariosPublicos->DatosEnajenantesCopSC->DatosEnajenanteCopSC:[Porcentaje]",
-                    "NotariosPublicos->DatosAdquirientesCopSC->DatosAdquirienteCopSC:[Porcentaje]"
+                    "NotariosPublicos->DatosOperacion:[IVA] ( se debe calucalr sumando campos )",
+                    "NotariosPublicos->DatosNotario:[Adscripcion] ( se tendría que crear una estructura nueva de notaría)",
+                    "NotariosPublicos->DatosEnajenante:[CoproSocConyugalE] ( agregra en uan estrcutura extra para el complemento notarios)",
+                    "NotariosPublicos->DatosAdquiriente:[CoproSocConyugalE] ( agregra en uan estrcutura extra para el complemento notarios)",
+                    {
+                        "extras": {
+                            "EnajtesCoproSocConyugalE": {
+                                "ejemplos": [
+                                    "si"
+                                ],
+                                "utilizadoEn": [
+                                    {
+                                        "id": "D0002",
+                                        "decripcion": "CFDI->notariospublicos",
+                                        "campos": [
+                                            {
+                                                "nombre": "CoproSocConyugalE",
+                                                "ruta": "NotariosPublicos->DatosEnajenantesCopSC->DatosEnajenanteCopSC"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "AdquirientesCoproSocConyugalE": {
+                                "ejemplos": [
+                                    "si"
+                                ],
+                                "utilizadoEn": [
+                                    {
+                                        "id": "D0002",
+                                        "decripcion": "CFDI->notariospublicos",
+                                        "campos": [
+                                            {
+                                                "nombre": "CoproSocConyugalE",
+                                                "ruta": "NotariosPublicos->DatosAdquirientesCopSC->DatosAdquirienteCopSC"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
                 ]
             }
         ],
         "notario": {
-            "numero": "",
+            "numero": {
+                "ejemplos": [
+                    "214"
+                ],
+                "utilizadoEn": [
+                    {
+                        "id": "D0002",
+                        "decripcion": "CFDI->notariospublicos",
+                        "campos": [
+                            {
+                                "nombre": "NumNotaria",
+                                "ruta": "NotariosPublicos->DatosNotario"
+                            }
+                        ]
+                    }
+                ]
+            },
             "entidad": "",
+            "entidadId": {
+                "ejemplos": [
+                    "15"
+                ],
+                "utilizadoEn": [
+                    {
+                        "id": "D0002",
+                        "decripcion": "CFDI->notariospublicos",
+                        "campos": [
+                            {
+                                "nombre": "EntidadFederativa",
+                                "ruta": "NotariosPublicos->DatosNotario",
+                                "catalogo": [
+                                    "http://127.0.0.1:8000/estandar/catalogos/C0001EntidadesFederativas.json"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
             "nombreFiscal": "",
             "rfc": "",
-            "curp": ""
+            "curp": {
+                "ejemplos": [
+                    "BAPR80101HDFLRA00"
+                ],
+                "utilizadoEn": [
+                    {
+                        "id": "D0002",
+                        "decripcion": "CFDI->notariospublicos",
+                        "campos": [
+                            {
+                                "nombre": "CURP",
+                                "ruta": "NotariosPublicos->DatosNotario"
+                            }
+                        ]
+                    }
+                ]
+            }
         },
         "expediente": {
             "expediente": "128\/FGGZ",
@@ -416,7 +503,40 @@
                         }
                     ]
                 },
-                "folio_real": "20243321-33",
+                "localidad": {
+                    "ejemplos": [
+                        "Actopan Bajo"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "Localidad",
+                                    "ruta": "NotariosPublicos->DescInmuebles->DescInmueble"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "referencia": {
+                    "ejemplos": [
+                        "Muy cerca del puente"
+                    ],
+                    "utilizadoEn": [
+                        {
+                            "id": "D0002",
+                            "decripcion": "CFDI->notariospublicos",
+                            "campos": [
+                                {
+                                    "nombre": "Referencia",
+                                    "ruta": "NotariosPublicos->DescInmuebles->DescInmueble"
+                                }
+                            ]
+                        }
+                    ]
+                },
                 "numero": "-",
                 "tomo": "-",
                 "libro": "-",
@@ -530,6 +650,27 @@
                         "nombre": "ANDRES CUÑA TORRES",
                         "firmante": "si",
                         "fecha_firma_comp": null,
+                        "porcenjate": {
+                            "ejemplos": [
+                                "100%"
+                            ],
+                            "utilizadoEn": [
+                                {
+                                    "id": "D0002",
+                                    "decripcion": "CFDI->notariospublicos",
+                                    "campos": [
+                                        {
+                                            "nombre": "Porcentaje",
+                                            "ruta": "NotariosPublicos->DatosEnajenantesCopSC->DatosEnajenanteCopSC"
+                                        },
+                                        {
+                                            "nombre": "NumInstrumentoNotarial",
+                                            "ruta": "NotariosPublicos->DatosEnajenantesCopSC->DatosAdquirienteCopSC"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
                         "roles": [
                             "enajenante"
                         ]
