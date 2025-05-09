@@ -1,3 +1,4 @@
+#Leer en https://editor.swagger.io/
 openapi: 3.0.4
 info:
   title: Schema de Actos
