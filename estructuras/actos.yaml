@@ -1,0 +1,158 @@
+openapi: 3.0.4
+info:
+  title: Schema de Actos
+  description: Representación de Schema de actos.
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 0.0.1
+paths:
+  /actos:
+    get:
+      responses:
+        '200':
+          description: Successful operation
+components:
+  schemas:
+    data_type_fecha:
+      type: string
+      format : date    
+    catalogo_tipo_personas:
+      type: string
+      enum:
+        - PF
+        - PFE
+        - PFEV
+        - PM
+        - PMDP
+        - PMDPS
+        - PME
+        - PMEF
+        - PMEM
+        - PMF
+      description: |
+        Catálogo de tipos de persona:
+        - PF: Persona Física Nacional vive en México. (Anexo3)
+        - PFE: Persona Física Extranjera. (Anexo3)
+        - PFEV: Persona Física Extranjera Visitante. (Anexo5)
+        - PM: Persona Moral Nacional. (Anexo4)
+        - PMDP: Persona Moral Derecho Público. (Anexo4Bis)
+        - PMDPS: Persona Moral Derecho Público régimen simplificado. (Anexo7Bis)
+        - PME: Persona Moral Extranjera. (Anexo6)
+        - PMEF: Persona Moral Entidad Financiera. (Anexo9)
+        - PMEM: Persona Moral Embajada, Consulados u Organismos Internacionales. (Anexo6Bis)
+        - PMF: Persona Moral Fideicomisos. (Anexo8)
+    catalogo_actos:
+      type: string
+      enum:
+        - A0001
+        - A0002
+        - A0003
+        - A0004
+        - A0005
+      description: |
+        Catálogo de actos:
+        - Compravente
+        - Poder
+        - fideicomiso
+        - Testamento
+        - Hipoteca
+    catalogo_roles:
+      type: string
+      enum:
+        - R0001
+        - R0002
+        - R0003
+        - R0004
+        - R0005
+      description: |
+        Catálogo de roles:
+        - Comprador
+        - Vendedor
+        - Represenante
+        - Fideicominente
+        - Difeicomisario
+    representante:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 1
+        tipo_persona:
+          $ref: '#/components/schemas/catalogo_tipo_personas'
+        name_completo:
+          type: string
+          example: Jaun Mora Gonzalez
+        firmante:
+          type: boolean
+          example: true
+    compareciente:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 10
+        id_catalogo_tipo_personas:
+          $ref: '#/components/schemas/catalogo_tipo_personas'
+        nombre_completo:
+          type: string
+          example: Alfoso Luna Gonzalez
+        firmate:
+          type: boolean
+          format: date-time
+        id_catalogo_roles:
+          $ref: '#/components/schemas/catalogo_roles'
+        representantes:
+          type: array
+          items:
+            $ref: '#/components/schemas/representante'
+    acto:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 10
+        id_catalogo_actos:
+          $ref: '#/components/schemas/catalogo_actos'
+        comparecientes:
+          type: array
+          items:
+            $ref: '#/components/schemas/compareciente'
+    instrumento:
+      type: object
+      properties:
+        protocolo:
+          type: integer
+          example: 9
+        numero:
+          type: integer
+          example: 2344
+        fechas:
+          type: object
+          properties:
+            fecha_pase:
+              $ref: '#/components/schemas/data_type_fecha'
+            fecha_firma:
+              $ref: '#/components/schemas/data_type_fecha'
+            fecha_definitiva:
+              $ref: '#/components/schemas/data_type_fecha'
+        folios:      
+          type: object
+          properties:
+            cantidad:
+              type: integer
+            utilizados:
+              type: array
+              items:
+                type: integer
+            inutilizados:
+              type: array
+              items:
+                type: integer
+        actos:
+          type: array
+          items:
+            $ref: '#/components/schemas/acto'
