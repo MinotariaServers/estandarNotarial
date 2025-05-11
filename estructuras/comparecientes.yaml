@@ -1,0 +1,171 @@
+openapi: 3.0.0
+info:
+  title: API de Comparecientes
+  description: API para gestionar comparecientes y sus direcciones
+  version: 1.0.0
+paths:
+  /comparecientes:
+    get:
+      tags:
+        - comparecientes
+      summary: Obtener todos los comparecientes
+      responses:
+        "200":
+          description: Una lista de comparecientes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Compareciente"
+    post:
+      tags:
+        - comparecientes
+      summary: Agregar un nuevo compareciente
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Compareciente"
+      responses:
+        "201":
+          description: Compareciente creado
+  /comparecientes/{id}:
+    get:
+      tags:
+        - comparecientes
+      summary: Obtener un compareciente por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Un compareciente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Compareciente"
+    put:
+      tags:
+        - comparecientes
+      summary: Actualizar un compareciente
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Compareciente"
+      responses:
+        "200":
+          description: Compareciente actualizado
+    delete:
+      tags:
+        - comparecientes
+      summary: Eliminar un compareciente
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Compareciente eliminado
+components:
+  schemas:
+    Compareciente:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Identificador único para el compareciente
+        id_direccion:
+          type: integer
+          description: Identificador único para la dirección. Referencia al esquema Direccion.
+        curp:
+          type: string
+        rfc:
+          type: string
+        tipo_participante:
+          type: string
+        tipo_representante:
+          type: string
+        tipo_persona:
+          type: string
+        nombre_completo:
+          type: string
+        nombre_fiscal:
+          type: string
+        es_persona_fisica:
+          type: boolean
+        fecha_nacimiento:
+          type: string
+          format: date
+        fecha_defuncion:
+          type: string
+          format: date
+        edad:
+          type: integer
+        genero:
+          type: string
+        lugar_origen:
+          type: string
+        nacionalidad:
+          type: string
+        estado_civil:
+          type: string
+        estado_civil_adquisicion:
+          type: string
+        regimen_patrimonial:
+          type: string
+        regimen_patrimonial_adquisicion:
+          type: string
+        ocupacion:
+          type: string
+        regimen_fiscal:
+          type: string
+        numero_registro_fiscal:
+          type: string
+    Direccion:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Identificador único para la dirección
+        tipo_domicilio:
+          type: string
+        direccion:
+          type: string
+        calle:
+          type: string
+        numero_exterior:
+          type: string
+        numero_interior:
+          type: string
+        colonia:
+          type: string
+        municipio:
+          type: string
+        codigo_postal:
+          type: string
+        manzana:
+          type: string
+        lote:
+          type: string
+        localidad:
+          type: string
+        referencia:
+          type: string
+        estado:
+          type: string
+tags:
+  - name: comparecientes
+    description: Operaciones relacionadas con comparecientes
