@@ -1,0 +1,215 @@
+openapi: 3.0.0
+info:
+  title: Inmueble API
+  version: 1.0.0
+paths:
+  /inmueble:
+    get:
+      summary: Retrieve an inmueble
+      responses:
+        '200':
+          description: A single inmueble
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inmueble'
+components:
+  schemas:
+    Inmueble:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the inmueble
+        tipo_inmueble:
+          $ref: '#/components/schemas/TipoInmueble'
+        uso_suelo:
+          $ref: '#/components/schemas/UsoSuelo'
+        regimen_propiedad:
+          $ref: '#/components/schemas/RegimenPropiedad'
+        clave_catastral:
+          type: string
+        folio_inmobiliario:
+          type: string
+        hipotecado:
+          type: boolean
+        ubicacion:
+          $ref: '#/components/schemas/Ubicacion'
+        valores:
+          $ref: '#/components/schemas/Valores'
+        antecedentes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Antecedente'
+        propietarios:
+          type: array
+          items:
+            $ref: '#/components/schemas/Propietario'
+    TipoInmueble:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Identifier from [C0002TipoInmueble.json](../catalogos/C0002TipoInmueble.json)
+        name:
+          type: string
+          description: Name of the inmueble type
+    UsoSuelo:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Identifier for the land use
+        name:
+          type: string
+          description: Name of the land use
+    RegimenPropiedad:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Identifier for the property regime
+        name:
+          type: string
+          description: Name of the property regime
+    Ubicacion:
+      type: object
+      properties:
+        id_tipo_vialidad:
+          type: string
+          description: Identifier from [C0005TiposDeVialidades.json](../catalogos/C0005TiposDeVialidades.json)
+        nombre_vialidad:
+          type: string
+        num_ext:
+          type: string
+        num_int:
+          type: string
+        lote:
+          type: string
+        manzana:
+          type: string
+        id_tipo_asentamiento:
+          type: string
+          description: Identifier from [C0006TiposDeAsentamientos.json](../catalogos/C0006TiposDeAsentamientos.json)
+        nombre_asentamiento:
+          type: string
+        codigo_postal:
+          type: string
+        id_municipio:
+          type: string
+          description: Identifier from [C0007Municipios.json](../catalogos/C0007Municipios.json)
+        id_entidad_federativa:
+          type: string
+          description: Identifier from [C0001EntidadesFederativas.json](../catalogos/C0001EntidadesFederativas.json)
+        id_pais:
+          type: string
+          description: Identifier from [C0003Paises.json](../catalogos/C0003Paises.json)
+        coordenadas_utm:
+          type: string
+        referencia:
+          type: string
+    Valores:
+      type: object
+      properties:
+        valor_comercial:
+          type: number
+          format: float
+        valor_catastral:
+          type: number
+          format: float
+        valor_fiscal:
+          type: number
+          format: float
+        monto_operacion:
+          type: number
+          format: float
+        superficie_terreno:
+          type: number
+          format: float
+        superficie_construccion:
+          type: number
+          format: float
+        superficie_area_comun:
+          type: number
+          format: float
+        valor_terreno:
+          type: number
+          format: float
+        valor_construccion:
+          type: number
+          format: float
+        valor_area_comun:
+          type: number
+          format: float
+        niveles_construidos:
+          type: string
+        antiguedad:
+          type: integer
+    Antecedente:
+      type: object
+      properties:
+        id_antecedente:
+          type: string
+          description: Unique identifier for the antecedent
+        id_tipo_antecedente:
+          type: string
+          description: Identifier from [C0008TiposDeAntecedentes.json](../catalogos/C0008TiposDeAntecedentes.json)
+        escritura:
+          type: string
+        fecha_emision:
+          type: string
+          format: date
+        nombre_notario:
+          type: string
+        num_notario:
+          type: string
+        entidad_notario:
+          type: string
+        tipo_notario:
+          type: string
+        fecha_inscripcion:
+          type: string
+          format: date
+        id_subdireccion_inscripcion:
+          type: string
+          description: Identifier from [C0009SubdireccionesRPP.json](../catalogos/C0009SubdireccionesRPP.json)
+        id_seccion_rpp:
+          type: string
+          description: Identifier from [C0010SeccionesRPP.json](../catalogos/C0010SeccionesRPP.json)
+        folio:
+          type: string
+        operacion:
+          type: string
+        partida:
+          type: string
+        libro:
+          type: string
+        tomo:
+          type: string
+        archivo:
+          type: string
+    Propietario:
+      type: object
+      properties:
+        entidad:
+          $ref: '#/components/schemas/Entidad'
+        regimen_juridico:
+          type: object
+          description: Regimen juridico details
+        domicilio_fiscal:
+          $ref: '#/components/schemas/Ubicacion'
+        porcentaje_propiedad:
+          type: number
+          format: float
+    Entidad:
+      type: object
+      properties:
+        id_entidad:
+          type: string
+        tipo:
+          type: string
+          description: Identifier from [C0004TiposDePersonas.json](../catalogos/C0004TiposDePersonas.json)
+        nombre:
+          type: string
+        rfc:
+          type: string
