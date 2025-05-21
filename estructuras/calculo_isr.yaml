@@ -96,6 +96,7 @@ components:
           tipo_inmueble: 1
           metros_terreno: 10.01
           metros_desplante_construccion: 5.05
+          codigo_postal: 11420
         monto_venta_terreno: 200.01
         monto_venta_construccion_total: 200.02
         monto_venta_construccion_comercial: 200.03
@@ -395,11 +396,13 @@ components:
         tipo_inmueble: 1
         metros_terreno: 10.01
         metros_desplante_construccion: 5.05
+        codigo_postal: 11420
       additionalProperties: false
       required:
         - tipo_inmueble
         - metros_terreno
         - metros_desplante_construccion
+        - codigo_postal
       properties:
         tipo_inmueble:
           $ref: "#/components/schemas/TipoInmuebles"
@@ -417,6 +420,12 @@ components:
           format: float
           description: Metros cuadrados de desplante de la construccion
           example: 5.05
+        codigo_postal:
+          type: string
+          pattern: "^[0-9]{5}"
+          maxLength: 5
+          description: Codigo postal de la entidad
+          example: 11420
     TipoCalculos:
       type: integer
       description: >
