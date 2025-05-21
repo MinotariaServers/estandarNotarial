@@ -17,10 +17,10 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Operacion"
+              $ref: "#/components/schemas/operacion"
           application/x-www-form-urlencoded:
             schema:
-              $ref: "#/components/schemas/Operacion"
+              $ref: "#/components/schemas/operacion"
       responses:
         "200":
           description: Cálculo exitoso del ISR
@@ -74,7 +74,7 @@ paths:
                     example: "Error al calcular el ISR"
 components:
   schemas:
-    Operacion:
+    operacion:
       required:
         - datos_inmueble
         - monto_venta_terreno
@@ -140,7 +140,7 @@ components:
           description: Identificador la operacion
           example: 1
         datos_inmueble:
-          $ref: "#/components/schemas/DatosInmueble"
+          $ref: "#/components/schemas/datos_inmueble"
         monto_venta_terreno:
           type: number
           minimum: 0
@@ -203,24 +203,24 @@ components:
           xml:
             wrapped: true
           items:
-            $ref: "#/components/schemas/Adquisicion"
+            $ref: "#/components/schemas/adquisicion"
         enajenantes:
           type: array
           maxItems: 999
           xml:
             wrapped: true
           items:
-            $ref: "#/components/schemas/Enajenante"
+            $ref: "#/components/schemas/enajenante"
         deducciones:
           type: array
           maxItems: 999
           xml:
             wrapped: true
           items:
-            $ref: "#/components/schemas/Deduccion"
+            $ref: "#/components/schemas/deduccion"
         configuracion:
-          $ref: "#/components/schemas/ConfiguracionCalculo"
-    Adquisicion:
+          $ref: "#/components/schemas/configuracion_calculo"
+    adquisicion:
       required:
         - tipo
         - monto_adquisicion
@@ -241,7 +241,7 @@ components:
           description: Identificador de la adquisicion
           example: 1
         tipo:
-          $ref: "#/components/schemas/TipoAdquisiciones"
+          $ref: "#/components/schemas/tipo_adquisiciones"
         monto_adquisicion:
           type: number
           minimum: 0
@@ -256,7 +256,7 @@ components:
           format: date
           description: Fecha de la adquisicion de la adquisicion o Fecha de final de construccion
           example: 2025-04-15
-    Enajenante:
+    enajenante:
       required:
         - tipo
         - porcentaje
@@ -281,7 +281,7 @@ components:
           description: Identificador del enajenante
           example: 1
         tipo:
-          $ref: "#/components/schemas/TipoEnajenantes"
+          $ref: "#/components/schemas/tipo_enajenantes"
         porcentaje:
           type: number
           minimum: 0
@@ -301,7 +301,7 @@ components:
           type: boolean
           description: Indica si el enajenante excenta el impuesto
           example: true
-    Deduccion:
+    deduccion:
       required:
         - tipo
         - enajenantes_considerados
@@ -328,7 +328,7 @@ components:
           description: Identificador de la deduccion
           example: 1
         tipo:
-          $ref: "#/components/schemas/TipoDeducciones"
+          $ref: "#/components/schemas/tipo_deducciones"
         enajenantes_considerados:
           type: array
           maxItems: 999
@@ -368,7 +368,7 @@ components:
           format: date
           description: Fecha de la deduccion
           example: 2025-04-15
-    ConfiguracionCalculo:
+    configuracion_calculo:
       type: object
       example:
         primera_enajenacion_parcela_ejidal: true
@@ -389,8 +389,8 @@ components:
           description: Indica si se compensa el calcuo cuando existe perdida por parte del calculo
           example: true
         metodo_calculo_actualizacion:
-          $ref: "#/components/schemas/TipoCalculos"
-    DatosInmueble:
+          $ref: "#/components/schemas/tipo_calculos"
+    datos_inmueble:
       type: object
       example:
         tipo_inmueble: 1
@@ -405,7 +405,7 @@ components:
         - codigo_postal
       properties:
         tipo_inmueble:
-          $ref: "#/components/schemas/TipoInmuebles"
+          $ref: "#/components/schemas/tipo_inmuebles"
         metros_terreno:
           type: number
           minimum: 0
@@ -426,7 +426,7 @@ components:
           maxLength: 5
           description: Codigo postal de la entidad
           example: 11420
-    TipoCalculos:
+    tipo_calculos:
       type: integer
       description: >
         Tipo de inmueble: 
@@ -436,7 +436,7 @@ components:
           - 4 = Mixto
       enum: [1, 2, 3, 4]
       example: 1
-    TipoInmuebles:
+    tipo_inmuebles:
       type: integer
       description: >
         Tipo de inmueble: 
@@ -447,7 +447,7 @@ components:
           - 5 = Mixto
       enum: [1, 2, 3, 4, 5]
       example: 1
-    TipoAdquisiciones:
+    tipo_adquisiciones:
       type: integer
       description: >
         Tipo de adquisicion: 
@@ -455,7 +455,7 @@ components:
           - 2 = Construcción
       enum: [1, 2]
       example: 1
-    TipoEnajenantes:
+    tipo_enajenantes:
       type: integer
       description: >
         Tipo de enajenante: 
@@ -463,7 +463,7 @@ components:
           - 2 = Persona Moral
       enum: [1, 2]
       example: 1
-    TipoDeducciones:
+    tipo_deducciones:
       type: integer
       description: >
         Tipo de deduccion: 
