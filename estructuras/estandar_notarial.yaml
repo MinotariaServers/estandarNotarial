@@ -7,11 +7,12 @@ info:
       - ## Objetivo: Tener toda la información necesaria para llenar:
         - **DeclaraNOT en línea ISR por Enajenación.**
         - **SDN.** ( Sello Digital Notarial ) 
-        - **CFDI->complementoNotarios.**.
+        - **CFDI->complementoNotarios.**
     - ## Versión 2.0 del Estandar Notarial
       - ## Objetivo: Tener toda la información necesaria para llenar:
         - **DeclaraNOT en línea Aviso UIF.**
-        - **RIN.** ( Red integral notarial sí sólo si, el API está disponible  ) 
+        - **Anexo 3 de la UIF.** ( Personas Físicas )
+        - **Anexo 4 de la UIF.** ( Personas Morales ) 
   license:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
@@ -35,6 +36,3 @@ components:
           type: object
         actos:
           type: object
-
-
-
