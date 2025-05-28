@@ -1,0 +1,40 @@
+#https://editor.swagger.io/
+openapi: 3.0.4
+info:
+  title: Schema de Estandar Notarial
+  description: |
+    - ## Versión 1.0 del Estandar Notarial
+      - ## Objetivo: Tener toda la información necesaria para llenar:
+        - **DeclaraNOT en línea ISR por Enajenación.**
+        - **SDN.** ( Sello Digital Notarial ) 
+        - **CFDI->complementoNotarios.**.
+    - ## Versión 2.0 del Estandar Notarial
+      - ## Objetivo: Tener toda la información necesaria para llenar:
+        - **DeclaraNOT en línea Aviso UIF.**
+        - **RIN.** ( Red integral notarial sí sólo si, el API está disponible  ) 
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 0.0.1
+paths:
+  /estandar_notarial:
+    get:
+      responses:
+        '200':
+          description: Successful operation
+components:
+  schemas:
+    estandar_notarial:
+      type: object
+      properties:
+        notaria:
+          type: object
+        comparecientes:
+          type: object
+        inmuebles:
+          type: object
+        actos:
+          type: object
+
+
+
