@@ -113,18 +113,14 @@ paths:
                     no_paso: false
                     participantes:
                       - index_persona: 2
-                        tipo_persona: PF
                         nombre: "COCACOLA SA DE CV"
                         firmante: true
                         id_rol: 101
                         rol: TESTAMENTO
                         representantes:
                           - index_persona: 1
-                            tipo_persona: PM
                             nombre: "ROMAN TERRY FRANCELIA"
                             firmante: true
-                            addenda:
-                              rin_nupm: 345721
                         addenda:
                           rin_nucomparecencia: 101
                     addenda:
