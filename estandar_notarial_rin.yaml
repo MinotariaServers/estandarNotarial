@@ -1,0 +1,558 @@
+openapi: 3.0.3
+info:
+  title: Estándar Notarial API - RIN
+  description: API para el manejo de documentos notariales según el estándar mexicano RIN
+  version: 1.0.0
+  contact:
+    name: ---
+    email: tmp@dominio.com
+
+servers:
+  - url: https://rinii.docsfa.com
+    description: Servidor RIN de DEV
+
+paths:
+  /api/instrumento:
+    post:
+      summary: Crear nuevo instrumento notarial
+      description: Crea un nuevo instrumento notarial en el sistema RIN
+      tags:
+        - Instrumentos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RequestInstrumento'
+            example:
+              login:
+                usuario: "usuario_ejemplo"
+                password: "password_ejemplo"
+              salida: "max"
+              data:
+                protocolo: 544
+                instrumento: 3171
+      responses:
+        '200':
+          description: Instrumento creado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseInstrumento'
+        '400':
+          description: Datos inválidos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: No autorizado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '422':
+          description: Error de validación
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+    
+    put:
+      summary: Actualizar instrumento notarial
+      description: Actualiza un instrumento notarial existente en el sistema RIN
+      tags:
+        - Instrumentos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RequestInstrumento'
+            example:
+              login:
+                usuario: "usuario_ejemplo"
+                password: "password_ejemplo"
+              salida: "max"
+              data:
+                protocolo: 544
+                libro: 631
+                instrumento: 3171
+                folios:
+                  inicial: 121154
+                  final: 121154
+                  cantidad: 1
+                  inutilizados: []
+                fechas:
+                  pase: "2025-05-05"
+                  firma: ""
+                  definitiva: ""
+                personas:
+                  - index_persona: 1
+                    tipo_persona: PF
+                    nombre_completo: "ROMAN TERRY FRANCELIA"
+                    nombre: FRANCELIA
+                    primer_apellido: ROMAN
+                    segundo_apellido: TERRY
+                    rfc: "ROTF010101HD3"
+                    curp: null
+                    addenda:
+                      rin_nupf: 2405168
+                      rin_nusolicitante: 2405168
+                  - index_persona: 2
+                    tipo_persona: PM
+                    nombre_completo: "COCACOLA SA DE CV"
+                    rfc: null
+                    curp: null
+                    addenda:
+                      rin_nupm: 345721
+                actos:
+                  - index_acto: 1
+                    id_acto: 293
+                    acto: TESTAMENTO
+                    no_paso: false
+                    participantes:
+                      - index_persona: 2
+                        tipo_persona: PF
+                        nombre: "COCACOLA SA DE CV"
+                        firmante: true
+                        id_rol: 101
+                        rol: TESTAMENTO
+                        representantes:
+                          - index_persona: 1
+                            tipo_persona: PM
+                            nombre: "ROMAN TERRY FRANCELIA"
+                            firmante: true
+                            addenda:
+                              rin_nupm: 345721
+                        addenda:
+                          rin_nucomparecencia: 101
+                    addenda:
+                      rin_nutipo: 293
+                addenda:
+                  rin_stestado: ""
+      responses:
+        '200':
+          description: Instrumento actualizado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseInstrumento'
+        '400':
+          description: Datos inválidos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: No autorizado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Instrumento no encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    RequestInstrumento:
+      type: object
+      required:
+        - login
+        - salida
+        - data
+      properties:
+        login:
+          $ref: '#/components/schemas/Login'
+        salida:
+          type: string
+          enum: [md, min, max]
+          description: |
+            - md : Markdown
+            - max : Con el máximo de información
+            - min : Con el mínimo de información
+          example: "md"
+        data:
+          $ref: '#/components/schemas/DocumentoNotarial'
+
+    Login:
+      type: object
+      required:
+        - usuario
+        - password
+      properties:
+        usuario:
+          type: string
+          description: Nombre de usuario para autenticación
+          example: "usuario_ejemplo"
+        password:
+          type: string
+          description: Contraseña del usuario
+          example: "password_ejemplo"
+
+    ResponseInstrumento:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Indica si la operación fue exitosa
+          example: true
+        message:
+          type: string
+          description: Mensaje de respuesta
+          example: "Instrumento procesado correctamente"
+        data:
+          type: object
+          description: Datos de respuesta específicos según el tipo de salida
+          additionalProperties: true
+
+    ErrorResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Indica si la operación fue exitosa
+          example: false
+        error:
+          type: string
+          description: Descripción del error
+          example: "Datos inválidos"
+        code:
+          type: string
+          description: Código de error
+          example: "VALIDATION_ERROR"
+
+    DocumentoNotarial:
+      type: object
+      required:
+        - protocolo
+        - libro
+        - instrumento
+        - folios
+        - fechas
+        - personas
+        - actos
+      properties:
+        protocolo:
+          type: integer
+          description: Número de protocolo
+          example: 544
+        libro:
+          type: integer
+          description: Número de libro
+          example: 631
+        instrumento:
+          type: integer
+          description: Número de instrumento
+          example: 3171
+        folios:
+          $ref: '#/components/schemas/Folios'
+        fechas:
+          $ref: '#/components/schemas/Fechas'
+        personas:
+          type: array
+          items:
+            $ref: '#/components/schemas/Persona'
+        actos:
+          type: array
+          items:
+            $ref: '#/components/schemas/Acto'
+        addenda:
+          $ref: '#/components/schemas/AddendaDocumento'
+
+    Folios:
+      type: object
+      required:
+        - inicial
+        - final
+        - cantidad
+        - inutilizados
+      properties:
+        inicial:
+          type: integer
+          description: Folio inicial
+          example: 121154
+        final:
+          type: integer
+          description: Folio final
+          example: 121154
+        cantidad:
+          type: integer
+          description: Cantidad de folios
+          example: 1
+        inutilizados:
+          type: array
+          items:
+            type: integer
+          description: Lista de folios inutilizados
+          example: []
+
+    Fechas:
+      type: object
+      required:
+        - pase
+        - firma
+        - definitiva
+      properties:
+        pase:
+          type: string
+          format: date
+          description: Fecha de pase
+          example: "2025-05-05"
+        firma:
+          type: string
+          format: date
+          description: Fecha de firma
+          example: ""
+        definitiva:
+          type: string
+          format: date
+          description: Fecha definitiva
+          example: ""
+
+    Persona:
+      type: object
+      required:
+        - index_persona
+        - tipo_persona
+        - nombre_completo
+        - addenda
+      properties:
+        index_persona:
+          type: integer
+          description: Índice de la persona
+          example: 1
+        tipo_persona:
+          type: string
+          enum: [PF, PM]
+          description: Tipo de persona (PF = Persona Física, PM = Persona Moral)
+          example: PF
+        nombre_completo:
+          type: string
+          description: Nombre completo de la persona
+          example: "ROMAN TERRY FRANCELIA"
+        nombre:
+          type: string
+          description: Nombre(s) - Solo para personas físicas
+          example: FRANCELIA
+        primer_apellido:
+          type: string
+          description: Primer apellido - Solo para personas físicas
+          example: ROMAN
+        segundo_apellido:
+          type: string
+          description: Segundo apellido - Solo para personas físicas
+          example: TERRY
+        rfc:
+          type: string
+          nullable: true
+          description: RFC de la persona
+          example: "ROTF010101HD3"
+        curp:
+          type: string
+          nullable: true
+          description: CURP de la persona - Solo para personas físicas
+          example: null
+        addenda:
+          $ref: '#/components/schemas/AddendaPersona'
+
+    AddendaPersona:
+      type: object
+      properties:
+        rin_nupf:
+          type: integer
+          description: Número de persona física en RIN
+          example: 2405168
+        rin_nupm:
+          type: integer
+          description: Número de persona moral en RIN
+          example: 345721
+        rin__id:
+          type: string
+          description: ID único en RIN
+          example: "685440e4ee0dde5a7a7cc0bf"
+        rin_nusolicitante:
+          type: integer
+          description: Número de solicitante en RIN
+          example: 2405168
+
+    Acto:
+      type: object
+      required:
+        - index_acto
+        - id_acto
+        - acto
+        - no_paso
+        - participantes
+        - addenda
+      properties:
+        index_acto:
+          type: integer
+          description: Índice del acto
+          example: 1
+        id_acto:
+          type: integer
+          description: ID del acto
+          example: 293
+        acto:
+          type: string
+          description: Nombre del acto
+          example: TESTAMENTO
+        no_paso:
+          type: boolean
+          description: Indica si el acto no pasó
+          example: false
+        participantes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Participante'
+        addenda:
+          $ref: '#/components/schemas/AddendaActo'
+
+    AddendaActo:
+      type: object
+      properties:
+        rin_nutipo:
+          type: integer
+          description: Número de tipo en RIN
+          example: 293
+        rin_nuacto:
+          type: integer
+          description: Número de acto en RIN
+          example: 1750353094047
+        rin_nuindice:
+          type: integer
+          description: Número de índice en RIN
+          example: 3
+        rin__id:
+          type: string
+          description: ID único en RIN
+          example: "685444c66ea8a803f1894a1f"
+
+    Participante:
+      type: object
+      required:
+        - index_persona
+        - tipo_persona
+        - nombre
+        - id_rol
+        - firmante
+        - rol
+        - representantes
+        - addenda
+      properties:
+        index_persona:
+          type: integer
+          description: Índice de la persona participante
+          example: 1
+        tipo_persona:
+          type: string
+          enum: [PF, PM]
+          description: Tipo de persona del participante
+          example: PF
+        nombre:
+          type: string
+          description: Nombre del participante
+          example: "ROMAN TERRY FRANCELIA"
+        id_rol:
+          type: integer
+          description: ID del rol
+          example: 101
+        firmante:
+          type: boolean
+          description: Indica si es firmante
+          example: true
+        rol:
+          type: string
+          description: Rol en el acto
+          example: TESTAMENTO
+        representantes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Representante'
+          description: Lista de representantes
+          example: []
+        addenda:
+          $ref: '#/components/schemas/AddendaParticipante'
+
+    AddendaParticipante:
+      type: object
+      properties:
+        rin_nucomparecencia:
+          type: integer
+          description: Número de comparecencia en RIN
+          example: 101
+        rin_nupf:
+          type: integer
+          description: Número de persona física en RIN
+          example: 2405168
+        rin_nusolicitante:
+          type: integer
+          description: Número de solicitante en RIN
+          example: 2405168
+        rin_nuacto:
+          type: integer
+          description: Número de acto en RIN
+          example: 1750353094047
+        rin__id:
+          type: string
+          description: ID único en RIN
+          example: "685444c66ea8a803f1894a2b"
+        rin_nuindice:
+          type: integer
+          description: Número de índice en RIN
+          example: 0
+
+    Representante:
+      type: object
+      required:
+        - index_persona
+        - firmante
+        - addenda
+        - nombre
+        - tipo_persona
+      properties:
+        index_persona:
+          type: integer
+          description: Índice de la persona representante
+          example: 2
+        firmante:
+          type: boolean
+          description: Indica si es firmante
+          example: true
+        nombre:
+          type: string
+          description: Nombre del representante
+          example: "COCACOLA SA DE CV"
+        tipo_persona:
+          type: string
+          enum: [PF, PM]
+          description: Tipo de persona del representante
+          example: PM
+        addenda:
+          type: object
+          properties:
+            rin_nupm:
+              type: integer
+              description: Número de persona moral en RIN
+              example: 345721
+
+    AddendaDocumento:
+      type: object
+      properties:
+        rin_stestado:
+          type: string
+          description: Estado del documento en RIN
+          example: "Existen errores en: fechas, actos, archivos, apéndice,"
+        conexped_expediente:
+          type: string
+          description: Número de expediente
+          example: "20/IMPORT/544"
+
+tags:
+  - name: Instrumentos
+    description: Operaciones relacionadas con instrumentos notariales en RIN
