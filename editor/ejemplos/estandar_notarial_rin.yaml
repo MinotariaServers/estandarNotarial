@@ -1,3 +1,4 @@
+#https://editor.swagger.io/
 openapi: 3.0.3
 info:
   title: Estándar Notarial API - RIN
@@ -23,7 +24,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/RequestInstrumento'
+              $ref: '#/components/schemas/request_instrumento'
             example:
               login:
                 usuario: "usuario_ejemplo"
@@ -38,25 +39,25 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ResponseInstrumento'
+                $ref: '#/components/schemas/response_instrumento'
         '400':
           description: Datos inválidos
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/error_response'
         '401':
           description: No autorizado
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/error_response'
         '422':
           description: Error de validación
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/error_response'
     
     put:
       summary: Actualizar instrumento notarial
@@ -68,7 +69,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/RequestInstrumento'
+              $ref: '#/components/schemas/request_instrumento'
             example:
               login:
                 usuario: "usuario_ejemplo"
@@ -101,7 +102,7 @@ paths:
                       rin_nusolicitante: 2405168
                   - index_persona: 2
                     tipo_persona: PM
-                    nombre_completo: "COCACOLA SA DE CV"
+                    nombre: "COCACOLA SA DE CV"
                     rfc: null
                     curp: null
                     addenda:
@@ -133,29 +134,29 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ResponseInstrumento'
+                $ref: '#/components/schemas/response_instrumento'
         '400':
           description: Datos inválidos
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/error_response'
         '401':
           description: No autorizado
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/error_response'
         '404':
           description: Instrumento no encontrado
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ErrorResponse'
+                $ref: '#/components/schemas/error_response'
 
 components:
   schemas:
-    RequestInstrumento:
+    request_instrumento:
       type: object
       required:
         - login
@@ -163,7 +164,7 @@ components:
         - data
       properties:
         login:
-          $ref: '#/components/schemas/Login'
+          $ref: '#/components/schemas/login'
         salida:
           type: string
           enum: [md, min, max]
@@ -173,9 +174,9 @@ components:
             - min : Con el mínimo de información
           example: "md"
         data:
-          $ref: '#/components/schemas/DocumentoNotarial'
+          $ref: '#/components/schemas/instrumento'
 
-    Login:
+    login:
       type: object
       required:
         - usuario
@@ -190,7 +191,7 @@ components:
           description: Contraseña del usuario
           example: "password_ejemplo"
 
-    ResponseInstrumento:
+    response_instrumento:
       type: object
       properties:
         success:
@@ -206,7 +207,7 @@ components:
           description: Datos de respuesta específicos según el tipo de salida
           additionalProperties: true
 
-    ErrorResponse:
+    error_response:
       type: object
       properties:
         success:
@@ -222,7 +223,7 @@ components:
           description: Código de error
           example: "VALIDATION_ERROR"
 
-    DocumentoNotarial:
+    instrumento:
       type: object
       required:
         - protocolo
@@ -235,32 +236,38 @@ components:
       properties:
         protocolo:
           type: integer
-          description: Número de protocolo
+          description: | 
+            - Número de protocolo.
+            - RIN->nuprotocolo
           example: 544
         libro:
           type: integer
-          description: Número de libro
+          description: |
+            - Libro del instrumento.
+            - RIN->nulibro
           example: 631
         instrumento:
           type: integer
-          description: Número de instrumento
+          description: |
+            - Número de instrumento.
+            - RIN->nuinstrumento
           example: 3171
         folios:
-          $ref: '#/components/schemas/Folios'
+          $ref: '#/components/schemas/folios'
         fechas:
-          $ref: '#/components/schemas/Fechas'
+          $ref: '#/components/schemas/fechas'
         personas:
           type: array
           items:
-            $ref: '#/components/schemas/Persona'
+            $ref: '#/components/schemas/persona'
         actos:
           type: array
           items:
-            $ref: '#/components/schemas/Acto'
+            $ref: '#/components/schemas/acto'
         addenda:
-          $ref: '#/components/schemas/AddendaDocumento'
+          $ref: '#/components/schemas/addenda_instrumento'
 
-    Folios:
+    folios:
       type: object
       required:
         - inicial
@@ -287,7 +294,7 @@ components:
           description: Lista de folios inutilizados
           example: []
 
-    Fechas:
+    fechas:
       type: object
       required:
         - pase
@@ -310,12 +317,12 @@ components:
           description: Fecha definitiva
           example: ""
 
-    Persona:
+    persona:
       type: object
       required:
         - index_persona
         - tipo_persona
-        - nombre_completo
+        - nombre
         - addenda
       properties:
         index_persona:
@@ -325,12 +332,8 @@ components:
         tipo_persona:
           type: string
           enum: [PF, PM]
-          description: Tipo de persona (PF = Persona Física, PM = Persona Moral)
+          description: Tipo de persona (PF = persona Física, PM = persona Moral)
           example: PF
-        nombre_completo:
-          type: string
-          description: Nombre completo de la persona
-          example: "ROMAN TERRY FRANCELIA"
         nombre:
           type: string
           description: Nombre(s) - Solo para personas físicas
@@ -353,10 +356,21 @@ components:
           nullable: true
           description: CURP de la persona - Solo para personas físicas
           example: null
+        nacionalidad:
+          type: string
+          description: |
+            - Descripcion: Nacionalidad de la persona
+            - Origen: catalogo de C0003Paises.json
+            - Utilizado en: DeclaraNOT ISR por Enajenación.
+            - Utilizado en: DeclaraNOT ISR por Adquisición.
+          example: "MEX"
+        domicilio:
+          type: string
+          description: Domicilio de la persona
         addenda:
-          $ref: '#/components/schemas/AddendaPersona'
+          $ref: '#/components/schemas/addenda_persona'
 
-    AddendaPersona:
+    addenda_persona:
       type: object
       properties:
         rin_nupf:
@@ -376,7 +390,7 @@ components:
           description: Número de solicitante en RIN
           example: 2405168
 
-    Acto:
+    acto:
       type: object
       required:
         - index_acto
@@ -405,11 +419,11 @@ components:
         participantes:
           type: array
           items:
-            $ref: '#/components/schemas/Participante'
+            $ref: '#/components/schemas/participante'
         addenda:
-          $ref: '#/components/schemas/AddendaActo'
+          $ref: '#/components/schemas/addenda_acto'
 
-    AddendaActo:
+    addenda_acto:
       type: object
       properties:
         rin_nutipo:
@@ -429,7 +443,7 @@ components:
           description: ID único en RIN
           example: "685444c66ea8a803f1894a1f"
 
-    Participante:
+    participante:
       type: object
       required:
         - index_persona
@@ -469,13 +483,13 @@ components:
         representantes:
           type: array
           items:
-            $ref: '#/components/schemas/Representante'
+            $ref: '#/components/schemas/representante'
           description: Lista de representantes
           example: []
         addenda:
-          $ref: '#/components/schemas/AddendaParticipante'
+          $ref: '#/components/schemas/addenda_participante'
 
-    AddendaParticipante:
+    addenda_participante:
       type: object
       properties:
         rin_nucomparecencia:
@@ -503,7 +517,7 @@ components:
           description: Número de índice en RIN
           example: 0
 
-    Representante:
+    representante:
       type: object
       required:
         - index_persona
@@ -537,7 +551,7 @@ components:
               description: Número de persona moral en RIN
               example: 345721
 
-    AddendaDocumento:
+    addenda_instrumento:
       type: object
       properties:
         rin_stestado:

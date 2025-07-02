@@ -1,5 +1,5 @@
 {
-    "nombre": "C0003Paises.json",
+    "nombre": "c0004_tipos_de_personas.json",
     "origien": [
         "https://www.sat.gob.mx/cs/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1705376468152&ssbinary=true",
         "https://wwwmat.sat.gob.mx/cs/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1461173462190&ssbinary=true"
@@ -8,10 +8,12 @@
         "NA"
     ],
     "catalogo": {
-        "PF": "Persona Física Nacional vive en México. (Anexo3)",
+        "PF": "Persona Física.",
+        "PM": "Persona Moral.",
+        "PFN": "Persona Física Nacional vive en México. (Anexo3)",
         "PFE": "Persona Física Extranjera. (Anexo3)",
         "PFEV": "Persona Física Extranjera Visitante. (Anexo5)",
-        "PM": "Persona Moral Nacional. (Anexo4)",
+        "PMN": "Persona Moral Nacional. (Anexo4)",
         "PMDP": "Persona Moral Derecho Público. (Anexo4Bis)",
         "PMDPS": "Persona Moral Derecho Público régimen simplificado. (Anexo7Bis)",
         "PME": "Persona Moral Extranjera. (Anexo6)",

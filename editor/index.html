@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swagger Editor Local</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist/swagger-ui.css">
+</head>
+<body class="clearfix">
+  <div class="editor-container">
+    <div class="selectors-container">
+      <div class="examples-selector">
+        <label for="example-select">Cargar ejemplo:</label>
+        <select id="example-select">
+          <option value="">-- Seleccionar ejemplo --</option>
+          <option value="estandar_notarial_rin.yaml">Estándar Notarial RIN</option>
+          <option value="calculo_isr.yaml">Calculo de ISR</option>
+        </select>
+      </div>
+      <div class="catalogos-selector">
+        <label for="catalogo-select">Cargar catálogo:</label>
+        <select id="catalogo-select">
+          <option value="">-- Seleccionar catálogo --</option>
+          <option value="c0000_entidades_de_datos.json">Entidades de Datos</option>
+          <option value="c0001_entidades_federativas.json">Entidades Federativas</option>
+          <option value="c0002_tipo_inmueble.json">Tipos de Inmueble</option>
+          <option value="c0003_paises.json">Países</option>
+          <option value="c0004_tipos_de_personas.json">Tipos de Personas</option>
+        </select>
+      </div>
+    </div>
+    <textarea id="swagger-yaml" placeholder="Pega aquí tu especificación OpenAPI/Swagger en YAML o JSON..."></textarea>
+    <button id="render-btn">Swagger UI / JSON</button>
+  </div>
+  
+  <div id="resizer"></div>
+  
+  <div id="viewer-container">
+    <div id="swagger-ui"></div>
+    <div id="json-viewer" style="display: none;">
+      <div class="json-header">
+        <h3>Visor JSON</h3>
+      </div>
+      <div id="json-content"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"></script>
+  <script src="https://unpkg.com/swagger-ui-dist/swagger-ui-standalone-preset.js"></script>
+  <script src="app.js"></script>
+</body>
+</html> 
