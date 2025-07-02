@@ -277,21 +277,29 @@ components:
       properties:
         inicial:
           type: integer
-          description: Folio inicial
+          description: |
+            - Folio inicial
+            - RIN->nufolio
           example: 121154
         final:
           type: integer
-          description: Folio final
+          description: |
+            - Folio final
+            - No se utiliza en RIN
           example: 121154
         cantidad:
           type: integer
-          description: Cantidad de folios
+          description: |
+            - Cantidad de folios
+            - RIN->nufolios
           example: 1
         inutilizados:
           type: array
           items:
             type: integer
-          description: Lista de folios inutilizados
+          description: |
+            - Lista de folios inutilizados
+            - RIN->arinutilizados
           example: []
 
     fechas:
@@ -304,17 +312,23 @@ components:
         pase:
           type: string
           format: date
-          description: Fecha de pase
+          description: |
+            - Fecha de pase.
+            - RIN->tsregistro
           example: "2025-05-05"
         firma:
           type: string
           format: date
-          description: Fecha de firma
+          description: |
+            - Fecha de firma.
+            - RIN->tspreventiva
           example: ""
         definitiva:
           type: string
           format: date
-          description: Fecha definitiva
+          description: |
+            - Fecha definitiva.
+            - RIN->tsdefinitiva
           example: ""
 
     persona:
