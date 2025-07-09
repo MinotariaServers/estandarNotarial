@@ -29,12 +29,42 @@ paths:
               schema:
                 type: object
                 example:
+                  ganancia_gravable: 43223223.10
+                  ganancia_no_gravable: 22122122.01
+                  ganancia_acumulada: 4545465.84
+                  ganancia_no_acumulada: 5554566.01
                   total_isr: 123456.78
                   isr_federacion: 23456.78
                   isr_entidad_federativa: 13456.78
                   detalles: "ISR calculado con base en tablas del SAT para el año 2025."
                 additionalProperties: false
                 properties:
+                  ganancia_gravable:
+                    type: number
+                    format: float
+                    description: >
+                     - Ganancia gravable
+                     - [DeclaraNot]->[Enajenacion_de_bienes]->[900006]->[GananciaOPerdida]
+                    example: 43223223.10
+                  ganancia_no_gravable:
+                    type: number
+                    format: float
+                    description: Ganancia no gravable
+                    example: 22122122.01
+                  ganancia_acumulada:
+                    type: number
+                    format: float
+                    description: >
+                     - Ganancia acumulable
+                     - [DeclaraNot]->[Enajenacion_de_bienes]->[900006]->[GananciaAcumulable]
+                    example: 4545465.84
+                  ganancia_no_acumulada:
+                    type: number
+                    format: float
+                    description: >
+                     - Ganancia no acumulable
+                     - [DeclaraNot]->[Enajenacion_de_bienes]->[900006]->[GananciaNoAcumulable]
+                    example: 5554566.01
                   total_isr:
                     type: number
                     format: float
@@ -146,14 +176,18 @@ components:
           minimum: 0
           maximum: 999999999999999.99
           format: float
-          description: Precio de la venta del terreno expresada en nuevos pesos mexicanos (MXN)
+          description: >
+           - Precio de la venta del terreno expresada en nuevos pesos mexicanos (MXN)
+           - [DeclaraNot]->[Enajenacion_de_bienes]->[900006]->[MontoOperacion]->[Suma_montos_terreno_construccion]
           example: 200.01
         monto_venta_construccion_total:
           type: number
           minimum: 0
           maximum: 999999999999999.99
           format: float
-          description: Precio de la venta de la construccion total expresada en nuevos pesos mexicanos (MXN)
+          description: >
+           - Precio de la venta de la construccion total expresada en nuevos pesos mexicanos (MXN)
+           - [DeclaraNot]->[Enajenacion_de_bienes]->[900006]->[MontoOperacion]->[Suma_montos_terreno_construccion]
           example: 200.02
         monto_venta_construccion_comercial:
           type: number
@@ -167,7 +201,9 @@ components:
           maxLength: 10
           pattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
           format: date
-          description: Fecha de la venta del inmueble
+          description: >
+           - Fecha de la venta del inmueble
+           - [DeclaraNot]->[Enajenacion_de_bienes]->[900001]->[FechaEscritura]
           example: 2025-04-15
         costo_avaluo_terreno:
           type: number
@@ -445,6 +481,7 @@ components:
           - 3 = Habitacional
           - 4 = Comercial
           - 5 = Mixto
+          - [DeclaraNot]->[Enajenacion_de_bienes]->[900001]->[TipoInmueble]
       enum: [1, 2, 3, 4, 5]
       example: 1
     tipo_adquisiciones:
@@ -461,6 +498,7 @@ components:
         Tipo de enajenante: 
           - 1 = Persona Fisica
           - 2 = Persona Moral
+          - [DeclaraNot]->[Enajenacion_de_bienes]->[900003]->[TipoEnajenante]
       enum: [1, 2]
       example: 1
     tipo_deducciones:
