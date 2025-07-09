@@ -238,19 +238,111 @@ components:
           type: integer
           description: | 
             - Número de protocolo.
-            - RIN->nuprotocolo
+            - utilizado_en->rin->post->/api/pm->nuprotocolo
+            - utilizado_en->rin->put->/api/pm->nuprotocolo
+            - utilizado_en->rin->patch->/api/pm->nuprotocolo
+            - utilizado_en->rin->post->/api/solicitante->nuprotocolo
+            - utilizado_en->rin->put->/api/solicitante->nuprotocolo
+            - utilizado_en->rin->patch->/api/solicitante->nuprotocolo
+            - utilizado_en->rin->post->/api/inmueble->nuprotocolo
+            - utilizado_en->rin->put->/api/inmueble->nuprotocolo
+            - utilizado_en->rin->patch->/api/inmueble->nuprotocolo
+            - utilizado_en->rin->post->/api/instrumento->nuprotocolo
+            - utilizado_en->rin->put->/api/instrumento->nuprotocolo
+            - utilizado_en->rin->patch->/api/instrumento->nuprotocolo
+            - utilizado_en->rin->get->/api/instrumentoinfo->nuprotocolo
+            - utilizado_en->rin->patch->/api/instrumentoinfo->nuprotocolo
+            - utilizado_en->rin->put->/api/instrumentolibro->nuprotocolo
+            - utilizado_en->rin->put->/api/instrumentolibro->nuprotocolo
+            - utilizado_en->rin->post->/api/nota->nuprotocolo
+            - utilizado_en->rin->put->/api/nota->nuprotocolo
+            - utilizado_en->rin->patch->/api/nota->nuprotocolo
+            - utilizado_en->rin->delete->/api/nota->nuprotocolo
+            - utilizado_en->rin->post->/api/acto->nuprotocolo
+            - utilizado_en->rin->put->/api/acto->nuprotocolo
+            - utilizado_en->rin->patch->/api/acto->nuprotocolo
+            - utilizado_en->rin->delete->/api/acto->nuprotocolo
+            - utilizado_en->rin->put->/api/acto/otro->nuprotocolo
+            - utilizado_en->rin->post->/api/actopf->nuprotocolo
+            - utilizado_en->rin->put->/api/actopf->nuprotocolo
+            - utilizado_en->rin->patch->/api/actopf->nuprotocolo
+            - utilizado_en->rin->delete->/api/actopf->nuprotocolo
+            - utilizado_en->rin->post->/api/actopm->nuprotocolo
+            - utilizado_en->rin->put->/api/actopm->nuprotocolo
+            - utilizado_en->rin->delete->/api/actopm->nuprotocolo
+
+            - utilizado_en->rin->post->/api/representantepf->nuprotocolo
+            - utilizado_en->rin->put->/api/representantepf->nuprotocolo
+            - utilizado_en->rin->patch->/api/representantepf->nuprotocolo
+            - utilizado_en->rin->delete->/api/representantepf->nuprotocolo
+
+            - utilizado_en->rin->post->/api/representantepm->nuprotocolo
+            - utilizado_en->rin->put->/api/representantepm->nuprotocolo
+            - utilizado_en->rin->patch->/api/representantepm->nuprotocolo
+            - utilizado_en->rin->delete->/api/representantepm->nuprotocolo
+
+            - utilizado_en->rin->post->/api/actoinmueble->nuprotocolo
+            - utilizado_en->rin->put->/api/actoinmueble->nuprotocolo
+            - utilizado_en->rin->delete->/api/actoinmueble->nuprotocolo
+
+            - utilizado_en->rin->post->/api/actoprograma->nuprotocolo
+            - utilizado_en->rin->put->/api/actoprograma->nuprotocolo
+            - utilizado_en->rin->delete->/api/actoprograma->nuprotocolo            
           example: 544
         libro:
           type: integer
           description: |
             - Libro del instrumento.
-            - RIN->nulibro
+            - utilizado_en->SDN->put->/sdn/createstamp/->volumen
           example: 631
         instrumento:
           type: integer
           description: |
             - Número de instrumento.
-            - RIN->nuinstrumento
+            - Número de protocolo.
+            - utilizado_en->rin->post->/api/instrumento->nuinstrumento
+            - utilizado_en->rin->put->/api/instrumento->nuinstrumento
+            - utilizado_en->rin->patch->/api/instrumento->nuinstrumento
+            - utilizado_en->rin->get->/api/instrumentoinfo->nuinstrumento
+            - utilizado_en->rin->patch->/api/instrumentoinfo->nuinstrumento
+            - utilizado_en->rin->put->/api/instrumentolibro->nuinstrumento
+            - utilizado_en->rin->put->/api/instrumentolibro->nuinstrumento
+            - utilizado_en->rin->post->/api/nota->nuinstrumento
+            - utilizado_en->rin->put->/api/nota->nuinstrumento
+            - utilizado_en->rin->patch->/api/nota->nuinstrumento
+            - utilizado_en->rin->delete->/api/nota->nuinstrumento
+            - utilizado_en->rin->post->/api/acto->nuinstrumento
+            - utilizado_en->rin->put->/api/acto->nuinstrumento
+            - utilizado_en->rin->patch->/api/acto->nuinstrumento
+            - utilizado_en->rin->delete->/api/acto->nuinstrumento
+            - utilizado_en->rin->put->/api/acto/otro->nuinstrumento
+            - utilizado_en->rin->post->/api/actopf->nuinstrumento
+            - utilizado_en->rin->put->/api/actopf->nuinstrumento
+            - utilizado_en->rin->patch->/api/actopf->nuinstrumento
+            - utilizado_en->rin->delete->/api/actopf->nuinstrumento
+            - utilizado_en->rin->post->/api/actopm->nuinstrumento
+            - utilizado_en->rin->put->/api/actopm->nuinstrumento
+            - utilizado_en->rin->delete->/api/actopm->nuinstrumento
+
+            - utilizado_en->rin->post->/api/representantepf->nuinstrumento
+            - utilizado_en->rin->put->/api/representantepf->nuinstrumento
+            - utilizado_en->rin->patch->/api/representantepf->nuinstrumento
+            - utilizado_en->rin->delete->/api/representantepf->nuinstrumento
+
+            - utilizado_en->rin->post->/api/representantepm->nuinstrumento
+            - utilizado_en->rin->put->/api/representantepm->nuinstrumento
+            - utilizado_en->rin->patch->/api/representantepm->nuinstrumento
+            - utilizado_en->rin->delete->/api/representantepm->nuinstrumento
+
+            - utilizado_en->rin->post->/api/actoinmueble->nuinstrumento
+            - utilizado_en->rin->put->/api/actoinmueble->nuinstrumento
+            - utilizado_en->rin->delete->/api/actoinmueble->nuinstrumento
+
+            - utilizado_en->rin->post->/api/actoprograma->nuinstrumento
+            - utilizado_en->rin->put->/api/actoprograma->nuinstrumento
+            - utilizado_en->rin->delete->/api/actoprograma->nuinstrumento
+            - utilizado_en->SDN->put->/sdn/createstamp/->escritura
+
           example: 3171
         folios:
           $ref: '#/components/schemas/folios'
@@ -279,19 +371,19 @@ components:
           type: integer
           description: |
             - Folio inicial
-            - RIN->nufolio
+            - utilizado_en->rin->put->/api/instrumento->nufolio
           example: 121154
         final:
           type: integer
           description: |
             - Folio final
-            - No se utiliza en RIN
+            - No utilizado en nungín lado
           example: 121154
         cantidad:
           type: integer
           description: |
             - Cantidad de folios
-            - RIN->nufolios
+            - utilizado_en->rin->put->/api/instrumento->nufolios
           example: 1
         inutilizados:
           type: array
@@ -299,7 +391,7 @@ components:
             type: integer
           description: |
             - Lista de folios inutilizados
-            - RIN->arinutilizados
+            - utilizado_en->rin->put->/api/instrumento->arinutilizados
           example: []
 
     fechas:
@@ -375,8 +467,8 @@ components:
           description: |
             - Descripcion: Nacionalidad de la persona
             - Origen: catalogo de C0003Paises.json
-            - Utilizado en: DeclaraNOT ISR por Enajenación.
-            - Utilizado en: DeclaraNOT ISR por Adquisición.
+            - utilizado_en->declaranot->isr_por_adquisicion->910002-DatosAdquirientes-grid:Nacionalidad
+            - utilizado_en->declaranot->isr_por_adquisicion->910003-DatosEnajenantes-grid:Nacionalidad
           example: "MEX"
         domicilio:
           type: string
