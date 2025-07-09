@@ -44,7 +44,8 @@ paths:
                     format: float
                     description: >
                      - Ganancia gravable
-                     - [DeclaraNot]->[Enajenacion_de_bienes]->[900006]->[GananciaOPerdida]
+                     
+                     - [DeclaraNot]->[Enajenacion_de_bienes]->[900006-DatosPago-grid]->[GananciaOPerdida]
                     example: 43223223.10
                   ganancia_no_gravable:
                     type: number
@@ -56,14 +57,16 @@ paths:
                     format: float
                     description: >
                      - Ganancia acumulable
-                     - [DeclaraNot]->[Enajenacion_de_bienes]->[900006]->[GananciaAcumulable]
+                     
+                     - [DeclaraNot]->[Enajenacion_de_bienes]->[900006-DatosPago-grid]->[GananciaAcumulable]
                     example: 4545465.84
                   ganancia_no_acumulada:
                     type: number
                     format: float
                     description: >
                      - Ganancia no acumulable
-                     - [DeclaraNot]->[Enajenacion_de_bienes]->[900006]->[GananciaNoAcumulable]
+                     
+                     - [DeclaraNot]->[Enajenacion_de_bienes]->[900006-DatosPago-grid]->[GananciaNoAcumulable]
                     example: 5554566.01
                   total_isr:
                     type: number
@@ -178,7 +181,8 @@ components:
           format: float
           description: >
            - Precio de la venta del terreno expresada en nuevos pesos mexicanos (MXN)
-           - [DeclaraNot]->[Enajenacion_de_bienes]->[900006]->[MontoOperacion]->[Suma_montos_terreno_construccion]
+           
+           - [DeclaraNot]->Enajenacion_de_bienes->900006-DatosPago-grid=IngresosEnajenacion (monto_venta_terreno + monto_venta_construccion_total)
           example: 200.01
         monto_venta_construccion_total:
           type: number
@@ -187,7 +191,8 @@ components:
           format: float
           description: >
            - Precio de la venta de la construccion total expresada en nuevos pesos mexicanos (MXN)
-           - [DeclaraNot]->[Enajenacion_de_bienes]->[900006]->[MontoOperacion]->[Suma_montos_terreno_construccion]
+           
+           - [DeclaraNot]->Enajenacion_de_bienes->900006-DatosPago-grid=IngresosEnajenacion (monto_venta_terreno + monto_venta_construccion_total)
           example: 200.02
         monto_venta_construccion_comercial:
           type: number
@@ -203,7 +208,8 @@ components:
           format: date
           description: >
            - Fecha de la venta del inmueble
-           - [DeclaraNot]->[Enajenacion_de_bienes]->[900001]->[FechaEscritura]
+           
+           - [DeclaraNot]->Enajenacion_de_bienes->900001-DatosOperacion=FechaEscritura
           example: 2025-04-15
         costo_avaluo_terreno:
           type: number
@@ -481,7 +487,8 @@ components:
           - 3 = Habitacional
           - 4 = Comercial
           - 5 = Mixto
-          - [DeclaraNot]->[Enajenacion_de_bienes]->[900001]->[TipoInmueble]
+          
+          - [DeclaraNot]->Enajenacion_de_bienes->900001-DatosOperacion = TipoInmueble (Traductor Catalago tipo_inmuebles vs Catalogo Declaranot 141)
       enum: [1, 2, 3, 4, 5]
       example: 1
     tipo_adquisiciones:
@@ -498,7 +505,8 @@ components:
         Tipo de enajenante: 
           - 1 = Persona Fisica
           - 2 = Persona Moral
-          - [DeclaraNot]->[Enajenacion_de_bienes]->[900003]->[TipoEnajenante]
+          
+          - [DeclaraNot]->Enajenacion_de_bienes->900003-DatosEnajenante-grid = TipoEnajenante
       enum: [1, 2]
       example: 1
     tipo_deducciones:
