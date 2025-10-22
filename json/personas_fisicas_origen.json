@@ -1,0 +1,220 @@
+{
+    "info_estandar_notarial": {
+        "titulo": "personas fisicas",
+        "version": "1.0.0",
+        "descripcion": "Contiene la información necesaria para la generación de documentos notariales de personas fisicas",
+        "fuente": "https://www.pld.hacienda.gob.mx/work/models/PLD/documentos/compilado_rcg_reforma30nov2020.pdf",
+        "conjunto_de_archivos": [
+            "personas_datos.json",
+            "personas_destino.json",
+            "personas_origen.json"
+        ]
+    },
+    "nombre": [
+        "INE",
+        "Pasaporte",
+        "FM3",
+        "FM4",
+        "Cartilla de Servicio Militar"
+    ],
+    "apellido_paterno": [
+        "INE",
+        "Pasaporte",
+        "FM3",
+        "FM4",
+        "Cartilla de Servicio Militar"
+    ],
+    "apellido_materno": [
+        "INE",
+        "Pasaporte",
+        "FM3",
+        "FM4",
+        "Cartilla de Servicio Militar"
+    ],
+    "fecha_nacimiento": [
+        "INE",
+        "Pasaporte",
+        "FM3",
+        "FM4",
+        "Cartilla de Servicio Militar"
+    ],
+    "pais_nacimiento": [
+        "INE",
+        "Pasaporte",
+        "FM3",
+        "FM4",
+        "Cartilla de Servicio Militar"
+    ],
+    "pais_nacionalidad": [
+        "INE",
+        "Pasaporte",
+        "FM3",
+        "FM4",
+        "Cartilla de Servicio Militar"
+    ],
+    "actividad_ocupacion": [
+        "cliente"
+    ],
+    "domicilios": [
+        {
+            "uso_domicilio": [
+                "INE",
+                "CSF",
+                "Estado de cuenta bancaria",
+                "Comporbante de telefonia",
+                "Comprobante de agua",
+                "Comprobante de luz",
+                "Comprobante de gas",
+                "Comprobante de internet"
+            ],
+            "pais": [
+                "INE",
+                "CSF",
+                "Estado de cuenta bancaria",
+                "Comporbante de telefonia",
+                "Comprobante de agua",
+                "Comprobante de luz",
+                "Comprobante de gas",
+                "Comprobante de internet"
+            ],
+            "codigo_postal": [
+                "INE",
+                "CSF",
+                "Estado de cuenta bancaria",
+                "Comporbante de telefonia",
+                "Comprobante de agua",
+                "Comprobante de luz",
+                "Comprobante de gas",
+                "Comprobante de internet"
+            ],
+            "entidad_federativa": [
+                "INE",
+                "CSF",
+                "Estado de cuenta bancaria",
+                "Comporbante de telefonia",
+                "Comprobante de agua",
+                "Comprobante de luz",
+                "Comprobante de gas",
+                "Comprobante de internet"
+            ],
+            "municipio": [
+                "INE",
+                "CSF",
+                "Estado de cuenta bancaria",
+                "Comporbante de telefonia",
+                "Comprobante de agua",
+                "Comprobante de luz",
+                "Comprobante de gas",
+                "Comprobante de internet"
+            ],
+            "colonia": [
+                "INE",
+                "CSF",
+                "Estado de cuenta bancaria",
+                "Comporbante de telefonia",
+                "Comprobante de agua",
+                "Comprobante de luz",
+                "Comprobante de gas",
+                "Comprobante de internet"
+            ],
+            "calle": [
+                "INE",
+                "CSF",
+                "Estado de cuenta bancaria",
+                "Comporbante de telefonia",
+                "Comprobante de agua",
+                "Comprobante de luz",
+                "Comprobante de gas",
+                "Comprobante de internet"
+            ],
+            "numero_exterior": [
+                "INE",
+                "CSF",
+                "Estado de cuenta bancaria",
+                "Comporbante de telefonia",
+                "Comprobante de agua",
+                "Comprobante de luz",
+                "Comprobante de gas",
+                "Comprobante de internet"
+            ],
+            "numero_interior": [
+                "INE",
+                "CSF",
+                "Estado de cuenta bancaria",
+                "Comporbante de telefonia",
+                "Comprobante de agua",
+                "Comprobante de luz",
+                "Comprobante de gas",
+                "Comprobante de internet"
+            ]
+        }
+    ],
+    "telefonos": [
+        "cliente"
+    ],
+    "correo_electronicos": [
+        "cliente"
+    ],
+    "curp": [
+        "INE",
+        "CURP",
+        "CSF"
+    ],
+    "rfc": [
+        "CSF"
+    ],
+    "nombre_fiscal": [
+        "CSF"
+    ],
+    "identificacion": {
+        "nombre": [
+            "INE",
+            "Pasaporte",
+            "FM3",
+            "FM4",
+            "Cartilla de Servicio Militar"
+        ],
+        "autoridad": [
+            "INE",
+            "Pasaporte",
+            "FM3",
+            "FM4",
+            "Cartilla de Servicio Militar"
+        ],
+        "numero": [
+            "INE",
+            "Pasaporte",
+            "FM3",
+            "FM4",
+            "Cartilla de Servicio Militar"
+        ],
+        "fecha_inicio": [
+            "INE",
+            "Pasaporte",
+            "FM3",
+            "FM4",
+            "Cartilla de Servicio Militar"
+        ],
+        "fecha_fin": [
+            "INE",
+            "Pasaporte",
+            "FM3",
+            "FM4",
+            "Cartilla de Servicio Militar"
+        ]
+    },
+    "extra": {
+        "rin__id": [
+            "RIN"
+        ],
+        "grace_id": [
+            "GRACE"
+        ],
+        "minotaria_persona_id": [
+            "MINOTARIA"
+        ],
+        "protocolo_persona_id": [
+            "PROTOCLUS"
+        ]
+    }
+}

@@ -1,0 +1,178 @@
+{
+    "info_estandar_notarial": {
+        "titulo": "personas fisicas",
+        "version": "1.0.0",
+        "descripcion": "Contiene la información necesaria para la generación de documentos notariales de personas fisicas",
+        "fuente": "https://www.pld.hacienda.gob.mx/work/models/PLD/documentos/compilado_rcg_reforma30nov2020.pdf",
+        "conjunto_de_archivos": [
+            "personas_datos.json",
+            "personas_destino.json",
+            "personas_origen.json"
+        ]
+    },
+    "nombre": [
+        "anexo_3",
+        "declaranot_uif[txt][930003-Datos persona solicita formalización-grid:Nombre]",
+        "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:Nombre]",
+        "declaranot_uif[txt][930008-Representante legal realiza operacion a nombre persona moral-grid:Nombre]",
+        "declaranot_uif[txt][930010-Representante legal realiza operacion a nombre fideicomiso-grid:Nombre]",
+        "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:Nombre]",
+        "declaranot_uif[txt][930013-Representante legal realiza operacion a nombre persona moral-grid:Nombre]",
+        "declaranot_uif[txt][930015-Representante legal realiza operacion a nombre fideicomiso-grid:Nombre]"
+    ],
+    "apellido_paterno": [
+        "anexo_3",
+        "declaranot_uif[txt][930003-Datos persona solicita formalización-grid:ApellidoPaterno]",
+        "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:ApellidoPaterno]",
+        "declaranot_uif[txt][930008-Representante legal realiza operacion a nombre persona moral-grid:ApellidoPaterno]",
+        "declaranot_uif[txt][930010-Representante legal realiza operacion a nombre fideicomiso-grid:ApellidoPaterno]",
+        "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:ApellidoPaterno]",
+        "declaranot_uif[txt][930013-Representante legal realiza operacion a nombre persona moral-grid:ApellidoPaterno]",
+        "declaranot_uif[txt][930015-Representante legal realiza operacion a nombre fideicomiso-grid:ApellidoPaterno]"
+    ],
+    "apellido_materno": [
+        "anexo_3",
+        "declaranot_uif[txt][930003-Datos persona solicita formalización-grid:ApellidoMaterno]",
+        "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:ApellidoMaterno]",
+        "declaranot_uif[txt][930008-Representante legal realiza operacion a nombre persona moral-grid:ApellidoMaterno]",
+        "declaranot_uif[txt][930010-Representante legal realiza operacion a nombre fideicomiso-grid:ApellidoMaterno]",
+        "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:ApellidoMaterno]",
+        "declaranot_uif[txt][930013-Representante legal realiza operacion a nombre persona moral-grid:ApellidoMaterno]",
+        "declaranot_uif[txt][930015-Representante legal realiza operacion a nombre fideicomiso-grid:ApellidoMaterno]"
+    ],
+    "fecha_nacimiento": [
+        "anexo_3",
+        "declaranot_uif[txt][930003-Datos persona solicita formalización-grid:FechaNacimiento]",
+        "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:FechaNacimiento]",
+        "declaranot_uif[txt][930008-Representante legal realiza operacion a nombre persona moral-grid:FechaNacimiento]",
+        "declaranot_uif[txt][930010-Representante legal realiza operacion a nombre fideicomiso-grid:FechaNacimiento]",
+        "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:FechaNacimiento]",
+        "declaranot_uif[txt][930013-Representante legal realiza operacion a nombre persona moral-grid:FechaNacimiento]",
+        "declaranot_uif[txt][930015-Representante legal realiza operacion a nombre fideicomiso-grid:FechaNacimiento]"
+    ],
+    "pais_nacimiento": [
+        "anexo_3"
+    ],
+    "pais_nacionalidad": [
+        "anexo_3",
+        "declaranot_uif[txt][930003-Datos persona solicita formalización-grid:PaisNacionalidad]",
+        "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:PaisNacionalidad]",
+        "declaranot_uif[txt][930008-Representante legal realiza operacion a nombre persona moral-grid:PaisNacionalidad]",
+        "declaranot_uif[txt][930010-Representante legal realiza operacion a nombre fideicomiso-grid:PaisNacionalidad]",
+        "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:PaisNacionalidad]",
+        "declaranot_uif[txt][930013-Representante legal realiza operacion a nombre persona moral-grid:PaisNacionalidad]",
+        "declaranot_uif[txt][930015-Representante legal realiza operacion a nombre fideicomiso-grid:PaisNacionalidad]"
+    ],
+    "actividad_ocupacion": [
+        "anexo_3",
+        "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:ActividadEconomica]",
+        "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:ActividadEconomica]"
+    ],
+    "domicilios": [
+        {
+            "uso_domicilio": [
+                "anexo_3"
+            ],
+            "pais": [
+                "anexo_3",
+                "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:PaisNacionalidad]",
+                "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:PaisNacionalidad]"
+            ],
+            "codigo_postal": [
+                "anexo_3",
+                "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:CP]",
+                "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:CP]"
+            ],
+            "entidad_federativa": [
+                "anexo_3",
+                "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:Entidad]",
+                "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:Entidad]"
+            ],
+            "municipio": [
+                "anexo_3",
+                "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:Localidad]",
+                "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:Localidad]"
+            ],
+            "colonia": [
+                "anexo_3",
+                "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:Colonia]",
+                "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:Colonia]"
+            ],
+            "calle": [
+                "anexo_3",
+                "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:Calle]",
+                "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:Calle]"
+            ],
+            "numero_exterior": [
+                "anexo_3",
+                "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:NumExterior]",
+                "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:NumExterior]"
+            ],
+            "numero_interior": [
+                "anexo_3",
+                "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:NumInterior]",
+                "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:NumInterior]"
+            ]
+        }
+    ],
+    "telefonos": [
+        "anexo_3",
+        "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:NumeroTelefono]",
+        "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:NumeroTelefono]"
+    ],
+    "correo_electronicos": [
+        "anexo_3",
+        "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:CorreoElectronico]",
+        "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:CorreoElectronico]"
+    ],
+    "curp": [
+        "anexo_3",
+        "cfdi_complemento_notarios",
+        "declaranot_uif[txt][930003-Datos persona solicita formalización-grid:RFC]",
+        "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:RFC]",
+        "declaranot_uif[txt][930008-Representante legal realiza operacion a nombre persona moral-grid:RFC]",
+        "declaranot_uif[txt][930010-Representante legal realiza operacion a nombre fideicomiso-grid:RFC]",
+        "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:RFC]",
+        "declaranot_uif[txt][930013-Representante legal realiza operacion a nombre persona moral-grid:RFC]",
+        "declaranot_uif[txt][930015-Representante legal realiza operacion a nombre fideicomiso-grid:RFC]"
+    ],
+    "rfc": [
+        "anexo_3",
+        "cfdi",
+        "cfdi_complemento_notarios",
+        "cfdi_retenciones",
+        "declaranot_uif[txt][930003-Datos persona solicita formalización-grid:RFC]",
+        "declaranot_uif[txt][930006-Datos comprador Persona Fisica-grid:RFC]",
+        "declaranot_uif[txt][930008-Representante legal realiza operacion a nombre persona moral-grid:RFC]",
+        "declaranot_uif[txt][930010-Representante legal realiza operacion a nombre fideicomiso-grid:RFC]",
+        "declaranot_uif[txt][930011-Datos vendedor Persona Fisica-grid:RFC]",
+        "declaranot_uif[txt][930013-Representante legal realiza operacion a nombre persona moral-grid:RFC]",
+        "declaranot_uif[txt][930015-Representante legal realiza operacion a nombre fideicomiso-grid:RFC]"
+    ],
+    "nombre_fiscal": [
+        "cfdi",
+        "cfdi_retenciones"
+    ],
+    "identificacion": {
+        "nombre": [
+            "anexo_3"
+        ],
+        "autoridad": [
+            "anexo_3"
+        ],
+        "numero": [
+            "anexo_3"
+        ],
+        "fecha_inicio": [
+            "anexo_3"
+        ],
+        "fecha_fin": [
+            "anexo_3"
+        ]
+    },
+    "extra": {
+        "rin__id": [],
+        "grace_id": [],
+        "minotaria_persona_id": []
+    }
+}

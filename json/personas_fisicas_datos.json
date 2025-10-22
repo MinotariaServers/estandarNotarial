@@ -1,0 +1,52 @@
+{
+    "info_estandar_notarial": {
+        "titulo": "personas fisicas",
+        "version": "1.0.0",
+        "descripcion": "Contiene la información necesaria para la generación de documentos notariales de personas fisicas",
+        "fuente": "https://www.pld.hacienda.gob.mx/work/models/PLD/documentos/compilado_rcg_reforma30nov2020.pdf",
+        "conjunto_de_archivos": [
+            "personas_datos.json",
+            "personas_destino.json",
+            "personas_origen.json"
+        ]
+    },
+    "nombre": "!texto",
+    "apellido_paterno": "!texto",
+    "apellido_materno": "",
+    "fecha_nacimiento": "!fecha",
+    "pais_nacimiento": "!texto",
+    "pais_nacionalidad": "!texto",
+    "actividad_ocupacion": "!texto",
+    "domicilios": [
+        {
+            "tipo_domicilio": [
+                "residencial",
+                "trabajo"
+            ],
+            "pais": "!lista_de_paises",
+            "codigo_postal": "!texto",
+            "entidad_federativa": "!texto",
+            "municipio": "!texto",
+            "colonia": "!texto",
+            "calle": "!texto",
+            "numero_exterior": "!texto",
+            "numero_interior": "texto"
+        }
+    ],
+    "telefonos": [
+        "!texto"
+    ],
+    "correo_electronicos": [
+        "!texto"
+    ],
+    "curp": "!texto",
+    "rfc": "!texto",
+    "nombre_fiscal": "!texto",
+    "identificacion": {
+        "nombre": "!texto",
+        "autoridad": "!texto",
+        "numero": "!texto",
+        "fecha_inicio": "!fecha",
+        "fecha_fin": "!fecha"
+    }
+}
