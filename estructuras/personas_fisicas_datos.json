@@ -3,11 +3,11 @@
         "titulo": "personas fisicas",
         "version": "1.0.0",
         "descripcion": "Contiene la información necesaria para la generación de documentos notariales de personas fisicas",
-        "fuente": "https://www.pld.hacienda.gob.mx/work/models/PLD/documentos/compilado_rcg_reforma30nov2020.pdf",
+        "fuente": "https://github.com/MinotariaServers/estandarNotarial/blob/main/estructuras/personas_fisicas_datos.json",
         "conjunto_de_archivos": [
-            "personas_datos.json",
-            "personas_destino.json",
-            "personas_origen.json"
+            "https://github.com/MinotariaServers/estandarNotarial/blob/main/estructuras/personas_fisicas_datos.json",
+            "https://github.com/MinotariaServers/estandarNotarial/blob/main/estructuras/personas_fisicas_destino.json",
+            "https://github.com/MinotariaServers/estandarNotarial/blob/main/estructuras/personas_fisicas_origen.json"
         ]
     },
     "nombre": "!texto",
